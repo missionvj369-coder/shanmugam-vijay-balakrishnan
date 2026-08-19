@@ -19,7 +19,7 @@ const footerLinks = {
     { name: "Media", href: "/media" },
   ],
   external: [
-    { name: "UGT Global", href: "https://www.ugtglobal.space", external: true },
+    { name: "UGT Global", href: "https://ugtglobal.space", external: true },
     { name: "UGT India", href: "https://ugtindia.space", external: true },
     { name: "Creator Community", href: "https://creatorcommunity.space", external: true },
     { name: "Kingdom of Shiva", href: "https://kingdomofshiva.space", external: true },

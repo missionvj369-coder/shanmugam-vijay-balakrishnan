@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 
 interface WorkNode {
@@ -11,10 +11,6 @@ interface WorkNode {
   description: string;
   status: "operating" | "building" | "pilot" | "research" | "planned" | "vision";
   external?: boolean;
-  x?: number;
-  y?: number;
-  vx?: number;
-  vy?: number;
 }
 
 interface WorkCategory {
@@ -22,8 +18,6 @@ interface WorkCategory {
   label: string;
   nodes: WorkNode[];
   color: string;
-  x?: number;
-  y?: number;
 }
 
 const categories: WorkCategory[] = [
@@ -255,106 +249,19 @@ export function WorkMap({
 }) {
   const [hoveredNode, setHoveredNode] = useState<WorkNode | null>(null);
   const [hoveredCategory, setHoveredCategory] = useState<WorkCategory | null>(null);
-  const [layoutReady, setLayoutReady] = useState(false);
-  const containerRef = useRef<HTMLDivElement>(null);
-  const nodeRefs = useRef<Map<string, HTMLDivElement>>(new Map());
-  const categoryRefs = useRef<Map<string, HTMLDivElement>>(new Map());
+  const [isMobile, setIsMobile] = useState(false);
 
-  // Calculate positions for force-directed layout
   useEffect(() => {
-    if (!containerRef.current) return;
-
-    const container = containerRef.current;
-    const width = container.clientWidth;
-    const height = container.clientHeight;
-    const centerX = width / 2;
-    const centerY = height / 2;
-
-    // Position categories in a circle around center
-    const categoryRadius = Math.min(width, height) * 0.35;
-    categories.forEach((cat, i) => {
-      const angle = (i / categories.length) * Math.PI * 2 - Math.PI / 2;
-      cat.x = centerX + Math.cos(angle) * categoryRadius;
-      cat.y = centerY + Math.sin(angle) * categoryRadius;
-    });
-
-    // Position nodes around their categories
-    categories.forEach((cat) => {
-      if (cat.x === undefined || cat.y === undefined) return;
-      const nodeRadius = 140;
-      const catX = cat.x;
-      const catY = cat.y;
-      cat.nodes.forEach((node, j) => {
-        const angle = (j / cat.nodes.length) * Math.PI * 2;
-        node.x = catX + Math.cos(angle) * nodeRadius;
-        node.y = catY + Math.sin(angle) * nodeRadius;
-        node.vx = 0;
-        node.vy = 0;
-      });
-    });
-
-    setLayoutReady(true);
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  // Draw connections using SVG
-  const drawConnections = () => {
-    if (!layoutReady || !containerRef.current) return null;
-
-    const connections: React.ReactElement[] = [];
-    const processedPairs = new Set<string>();
-
-    for (const cat of categories) {
-      if (cat.x === undefined || cat.y === undefined) continue;
-      const catX = cat.x;
-      const catY = cat.y;
-
-      // Center to category
-      connections.push(
-        <line
-          key={`center-${cat.id}`}
-          x1={containerRef.current!.clientWidth / 2}
-          y1={containerRef.current!.clientHeight / 2}
-          x2={catX}
-          y2={catY}
-          stroke="currentColor"
-          strokeWidth="1"
-          strokeDasharray="4,4"
-          opacity="0.15"
-          className="transition-opacity duration-300"
-          style={{ color: cat.color }}
-        />
-      );
-
-      // Category to nodes
-      cat.nodes.forEach((node) => {
-        if (node.x === undefined || node.y === undefined) return;
-        const pairKey = `${cat.id}-${node.id}`;
-        if (processedPairs.has(pairKey)) return;
-        processedPairs.add(pairKey);
-
-        const isHovered = hoveredCategory?.id === cat.id || hoveredNode?.id === node.id;
-        connections.push(
-          <line
-            key={pairKey}
-            x1={catX}
-            y1={catY}
-            x2={node.x}
-            y2={node.y}
-            stroke="currentColor"
-            strokeWidth={isHovered ? 2 : 1}
-            opacity={isHovered ? 0.6 : 0.2}
-            className="transition-all duration-300"
-            style={{ color: cat.color }}
-          />
-        );
-      });
-    }
-
-    return <svg className="absolute inset-0 pointer-events-none" aria-hidden="true">{connections}</svg>;
-  };
-
-  if (!interactive) {
-    // Static version for mobile/simple display
+  // Static version for mobile/simple display
+  if (!interactive || isMobile) {
     return (
       <div className={`grid gap-4 md:grid-cols-2 lg:grid-cols-3 ${className}`} role="list" aria-label="Work areas">
         {categories.flatMap((cat) =>
@@ -395,129 +302,149 @@ export function WorkMap({
     );
   }
 
+  // Interactive desktop version with improved layout
   return (
     <div
-      ref={containerRef}
-      className={`relative min-h-[600px] lg:min-h-[700px] ${className}`}
+      className={`relative min-h-[700px] lg:min-h-[800px] ${className}`}
       role="graphics-document"
       aria-label="Interactive work map showing connections between projects and organizations"
     >
-      {drawConnections()}
-
-      {/* Center Node */}
+      {/* Center Hub - Improved Design */}
       <div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 animate-scale-in"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20"
         style={{ transform: "translate(-50%, -50%)" }}
       >
-        <div className="w-24 h-24 rounded-full border-2 border-primary/20 bg-background flex items-center justify-center text-center relative">
-          <div className="absolute inset-0 rounded-full border border-primary/10 animate-pulse" />
-          <div className="relative z-10">
-            <p className="text-xs font-medium text-foreground uppercase tracking-wider">MY WORK</p>
-            <p className="text-[10px] text-muted-foreground mt-0.5">Central Hub</p>
+        <div className="relative">
+          <div className="w-32 h-32 rounded-full border-2 border-primary/30 bg-gradient-to-br from-background to-muted/50 flex items-center justify-center text-center shadow-2xl">
+            <div className="absolute inset-0 rounded-full border-2 border-primary/20 animate-ping" />
+            <div className="absolute inset-2 rounded-full border border-primary/10" />
+            <div className="relative z-10">
+              <p className="text-sm font-semibold text-foreground uppercase tracking-wider">MY WORK</p>
+              <p className="text-xs text-muted-foreground mt-1">Central Hub</p>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Category Nodes */}
-      {categories.map((cat) => (
-        <div
-          key={cat.id}
-          ref={(el) => { if (el) categoryRefs.current.set(cat.id, el); }}
-          className="absolute z-10 transition-all duration-500"
-          style={{
-            left: cat.x ? `${cat.x}px` : 0,
-            top: cat.y ? `${cat.y}px` : 0,
-            transform: "translate(-50%, -50%)",
-            opacity: layoutReady ? 1 : 0,
-          }}
-          onMouseEnter={() => setHoveredCategory(cat)}
-          onMouseLeave={() => setHoveredCategory(null)}
-        >
-          <div className="w-20 h-20 rounded-full border-2 bg-background flex items-center justify-center text-center relative group/cat" style={{ borderColor: cat.color + "80" }}>
-            <div className="absolute inset-0 rounded-full opacity-0 group-hover/cat:opacity-100 transition-opacity" style={{ backgroundColor: cat.color }} />
-            <div className="relative z-10 text-foreground group-hover/cat:text-white transition-colors">
-              <p className="text-xs font-medium uppercase tracking-wider">{cat.label}</p>
+      {/* Category Nodes - Positioned in a circle */}
+      {categories.map((cat, index) => {
+        const angle = (index / categories.length) * Math.PI * 2 - Math.PI / 2;
+        const radius = 280;
+        const x = 50 + (Math.cos(angle) * radius / 4);
+        const y = 50 + (Math.sin(angle) * radius / 4);
+        
+        return (
+          <div
+            key={cat.id}
+            className="absolute z-10 transition-all duration-500 hover:z-30"
+            style={{
+              left: `${x}%`,
+              top: `${y}%`,
+              transform: "translate(-50%, -50%)",
+            }}
+            onMouseEnter={() => setHoveredCategory(cat)}
+            onMouseLeave={() => setHoveredCategory(null)}
+          >
+            <div className="relative group/cat">
+              <div className="w-24 h-24 rounded-full border-3 bg-background/95 backdrop-blur-sm flex items-center justify-center text-center shadow-xl" style={{ borderColor: cat.color + "60" }}>
+                <div className="absolute inset-0 rounded-full opacity-0 group-hover/cat:opacity-20 transition-opacity" style={{ backgroundColor: cat.color }} />
+                <div className="relative z-10 text-foreground group-hover/cat:text-white transition-colors">
+                  <p className="text-xs font-bold uppercase tracking-wider leading-tight">{cat.label}</p>
+                </div>
+              </div>
+              
+              {/* Category Label Tooltip */}
+              <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 px-4 py-2 rounded-lg bg-card border-2 border-border text-sm font-bold text-foreground whitespace-nowrap opacity-0 group-hover/cat:opacity-100 transition-opacity pointer-events-none z-20 shadow-lg">
+                {cat.label}
+              </div>
             </div>
           </div>
-          
-          {/* Category Label Tooltip */}
-          <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1.5 rounded bg-card border border-border text-xs font-medium text-foreground whitespace-nowrap opacity-0 group-hover/cat:opacity-100 transition-opacity pointer-events-none z-20">
-            {cat.label}
-          </div>
-        </div>
-      ))}
+        );
+      })}
 
-      {/* Work Nodes */}
-      {categories.flatMap((cat) =>
-        cat.nodes.map((node) => (
-          <div
-            key={node.id}
-            ref={(el) => { if (el) nodeRefs.current.set(node.id, el); }}
-            className="absolute z-10 transition-all duration-500"
-            style={{
-              left: node.x ? `${node.x}px` : 0,
-              top: node.y ? `${node.y}px` : 0,
-              transform: "translate(-50%, -50%)",
-              opacity: layoutReady ? 1 : 0,
-            }}
-            onMouseEnter={() => setHoveredNode(node)}
-            onMouseLeave={() => setHoveredNode(null)}
-          >
-            <Link
-              href={node.href}
-              className="block group/node"
-              aria-label={`${node.label} - ${statusLabels[node.status]} - ${node.category}`}
+      {/* Work Nodes - Positioned around their categories */}
+      {categories.map((cat, catIndex) => {
+        const angle = (catIndex / categories.length) * Math.PI * 2 - Math.PI / 2;
+        const catRadius = 280;
+        const catX = 50 + (Math.cos(angle) * catRadius / 4);
+        const catY = 50 + (Math.sin(angle) * catRadius / 4);
+        const nodeRadius = 120;
+
+        return cat.nodes.map((node, nodeIndex) => {
+          const nodeAngle = (nodeIndex / cat.nodes.length) * Math.PI * 2;
+          const x = catX + (Math.cos(nodeAngle) * nodeRadius / 4);
+          const y = catY + (Math.sin(nodeAngle) * nodeRadius / 4);
+
+          return (
+            <div
+              key={node.id}
+              className="absolute z-10 transition-all duration-500 hover:z-30"
+              style={{
+                left: `${x}%`,
+                top: `${y}%`,
+                transform: "translate(-50%, -50%)",
+              }}
+              onMouseEnter={() => setHoveredNode(node)}
+              onMouseLeave={() => setHoveredNode(null)}
             >
-              <div className="w-16 h-16 rounded-xl bg-card border-2 flex items-center justify-center text-center relative shadow-lg" style={{ borderColor: cat.color + "80" }}>
-                <div className="absolute inset-0 rounded-xl opacity-0 group-hover/node:opacity-100 transition-opacity" style={{ backgroundColor: cat.color }} />
-                <div className="relative z-10 px-2">
-                  <p className="text-xs font-medium text-foreground group-hover/node:text-white transition-colors leading-tight">{node.label}</p>
-                  <p className="text-[10px] text-muted-foreground group-hover/node:text-white/70 transition-colors mt-0.5">{statusLabels[node.status]}</p>
-                </div>
-              </div>
-            </Link>
-
-            {/* Node Detail Tooltip */}
-            {hoveredNode?.id === node.id && (
-              <div
-                className="absolute left-full top-1/2 -translate-y-1/2 ml-4 w-72 card-base z-30 animate-fade-in pointer-events-auto"
-                role="tooltip"
+              <Link
+                href={node.href}
+                className="block group/node"
+                aria-label={`${node.label} - ${statusLabels[node.status]} - ${node.category}`}
               >
-                <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style={{ backgroundColor: cat.color + "20" }}>
-                    <svg className="w-5 h-5" style={{ color: cat.color }} fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
-                    </svg>
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <Link href={node.href} className="font-medium text-foreground hover:text-primary transition-colors focus-visible-ring rounded block mb-1">
-                      {node.label}
-                    </Link>
-                    <span className={statusStyles[node.status]}>
-                      {statusLabels[node.status]}
-                    </span>
-                    <p className="text-xs text-muted-foreground mt-1">{node.category}</p>
-                    {showDescriptions && (
-                      <p className="text-sm text-muted-foreground mt-2">{node.description}</p>
-                    )}
-                    <Link
-                      href={node.href}
-                      className="inline-flex items-center gap-1 text-sm text-primary mt-3 hover:underline focus-visible-ring"
-                    >
-                      Explore →
-                    </Link>
+                <div className="relative">
+                  <div className="w-20 h-20 rounded-2xl bg-card/95 backdrop-blur-sm border-2 flex items-center justify-center text-center shadow-xl" style={{ borderColor: cat.color + "80" }}>
+                    <div className="absolute inset-0 rounded-2xl opacity-0 group-hover/node:opacity-100 transition-opacity" style={{ backgroundColor: cat.color }} />
+                    <div className="relative z-10 px-2">
+                      <p className="text-xs font-bold text-foreground group-hover/node:text-white transition-colors leading-tight">{node.label}</p>
+                      <p className="text-[10px] text-muted-foreground group-hover/node:text-white/80 transition-colors mt-1 font-medium">{statusLabels[node.status]}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            )}
-          </div>
-        ))
-      )}
+              </Link>
 
-      {/* Legend - positioned top-right to avoid node overlap */}
-      <div className="absolute top-4 right-4 z-20 card-base w-48">
-        <p className="caption text-foreground mb-3">Work Status</p>
-        <div className="space-y-2">
+              {/* Node Detail Tooltip */}
+              {hoveredNode?.id === node.id && (
+                <div
+                  className="absolute left-full top-1/2 -translate-y-1/2 ml-6 w-80 card-base z-30 animate-fade-in pointer-events-auto shadow-2xl"
+                  role="tooltip"
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style={{ backgroundColor: cat.color + "20" }}>
+                      <svg className="w-6 h-6" style={{ color: cat.color }} fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+                      </svg>
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <Link href={node.href} className="font-bold text-foreground hover:text-primary transition-colors focus-visible-ring rounded block mb-2 text-lg">
+                        {node.label}
+                      </Link>
+                      <span className={statusStyles[node.status]}>
+                        {statusLabels[node.status]}
+                      </span>
+                      <p className="text-xs text-muted-foreground mt-2 font-medium">{node.category}</p>
+                      {showDescriptions && (
+                        <p className="text-sm text-muted-foreground mt-3 leading-relaxed">{node.description}</p>
+                      )}
+                      <Link
+                        href={node.href}
+                        className="inline-flex items-center gap-2 text-sm text-primary mt-4 hover:underline focus-visible-ring font-medium"
+                      >
+                        Explore →
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+          );
+        });
+      })}
+
+      {/* Legend - positioned bottom-left to avoid node overlap */}
+      <div className="absolute bottom-4 left-4 z-20 card-base p-4 shadow-xl">
+        <p className="caption text-foreground mb-3 font-bold">Work Status</p>
+        <div className="grid grid-cols-2 gap-x-4 gap-y-2">
           {[
             { key: "operating", label: "Operating" },
             { key: "building", label: "Building" },

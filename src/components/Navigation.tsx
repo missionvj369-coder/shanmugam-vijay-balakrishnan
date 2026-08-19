@@ -282,7 +282,7 @@ export function Navigation() {
         {mobileMenuOpen && (
           <div
             id="mobile-menu"
-            className="md:hidden absolute top-full left-0 right-0 bg-background border-t border-border shadow-lg z-40 animate-fade-in"
+            className="md:hidden absolute top-full left-0 right-0 bg-background border-t border-border shadow-lg z-40 animate-fade-in max-h-[calc(100vh-4rem)] overflow-y-auto"
             role="navigation"
             aria-label="Mobile navigation"
           >

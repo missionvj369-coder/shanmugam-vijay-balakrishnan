@@ -65,10 +65,9 @@ const engagementTypes = [
 ];
 
 const contactChannels = [
-  { name: "Email", description: "Primary contact for all inquiries", href: "mailto:contact@example.com", icon: "email" },
-  { name: "GitHub", description: "Technical collaboration and open source", href: "https://github.com", icon: "github" },
-  { name: "LinkedIn", description: "Professional networking and partnership", href: "https://linkedin.com", icon: "linkedin" },
-  { name: "Twitter/X", description: "Updates and public conversation", href: "https://twitter.com", icon: "twitter" },
+  { name: "Email", description: "Primary contact for all inquiries", href: "mailto:soulconnect@ugtglobal.space", icon: "email" },
+  { name: "GitHub", description: "Technical collaboration and open source", href: "https://github.com/missionvj369-coder", icon: "github" },
+  { name: "LinkedIn", description: "Professional networking and partnership", href: "https://www.linkedin.com/in/universal-guard-trust-ugt-b09b05394?utm_source=share_via&utm_content=profile&utm_medium=member_ios", icon: "linkedin" },
 ];
 
 const guidelines = [
@@ -224,7 +223,7 @@ export default function ConnectPage() {
                 {[
                   { title: "Creator Community", description: "Execution layer — build with us.", href: "/creator-community", status: "BUILDING" },
                   { title: "Universal Guard Trust", description: "Research collaboration.", href: "/universal-guard-trust", status: "OPERATING" },
-                  { title: "Boysenberry", description: "Community economy partnership.", href: "/boysenberry", status: "BUILDING" },
+                  { title: "Boysenberry", description: "Community economy partnership.", href: "/boysenberry", status: "OPERATING" },
                   { title: "Technology", description: "Technical collaboration.", href: "/technology", status: "BUILDING" },
                   { title: "Ideas", description: "Understand the principles first.", href: "/ideas", status: "BUILDING" },
                 ].map((project) => (
