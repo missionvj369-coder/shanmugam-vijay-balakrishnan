@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
 
 interface WorkNode {
@@ -249,216 +249,110 @@ export function WorkMap({
 }) {
   const [hoveredNode, setHoveredNode] = useState<WorkNode | null>(null);
   const [hoveredCategory, setHoveredCategory] = useState<WorkCategory | null>(null);
-  const [isMobile, setIsMobile] = useState(false);
 
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
-
-  // Static version for mobile/simple display
-  if (!interactive || isMobile) {
-    return (
-      <div className={`grid gap-4 md:grid-cols-2 lg:grid-cols-3 ${className}`} role="list" aria-label="Work areas">
-        {categories.flatMap((cat) =>
-          cat.nodes.map((node) => (
-            <article
-              key={node.id}
-              className="card-interactive group"
-              role="listitem"
-            >
-              <div className="flex items-start gap-3">
-                <div
-                  className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0"
-                  style={{ backgroundColor: cat.color + "20" }}
-                >
-                  <svg className="w-5 h-5" style={{ color: cat.color }} fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
-                  </svg>
-                </div>
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-center gap-2 mb-1">
-                    <Link href={node.href} className="font-medium text-foreground hover:text-primary transition-colors focus-visible-ring rounded">
-                      {node.label}
-                    </Link>
-                    <span className={statusStyles[node.status]}>
-                      {statusLabels[node.status]}
-                    </span>
-                  </div>
-                  <p className="text-sm text-muted-foreground mb-2">{node.category}</p>
-                  {showDescriptions && (
-                    <p className="text-sm text-muted-foreground line-clamp-3">{node.description}</p>
-                  )}
-                </div>
-              </div>
-            </article>
-          ))
-        )}
-      </div>
-    );
-  }
-
-  // Interactive desktop version with improved layout
   return (
-    <div
-      className={`relative min-h-[700px] lg:min-h-[800px] ${className}`}
-      role="graphics-document"
-      aria-label="Interactive work map showing connections between projects and organizations"
-    >
-      {/* Center Hub - Improved Design */}
-      <div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20"
-        style={{ transform: "translate(-50%, -50%)" }}
-      >
-        <div className="relative">
-          <div className="w-32 h-32 rounded-full border-2 border-primary/30 bg-gradient-to-br from-background to-muted/50 flex items-center justify-center text-center shadow-2xl">
-            <div className="absolute inset-0 rounded-full border-2 border-primary/20 animate-ping" />
-            <div className="absolute inset-2 rounded-full border border-primary/10" />
-            <div className="relative z-10">
-              <p className="text-sm font-semibold text-foreground uppercase tracking-wider">MY WORK</p>
-              <p className="text-xs text-muted-foreground mt-1">Central Hub</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Category Nodes - Positioned in a circle */}
-      {categories.map((cat, index) => {
-        const angle = (index / categories.length) * Math.PI * 2 - Math.PI / 2;
-        const radius = 280;
-        const x = 50 + (Math.cos(angle) * radius / 4);
-        const y = 50 + (Math.sin(angle) * radius / 4);
-        
-        return (
+    <div className={`${className}`} role="list" aria-label="Work areas">
+      <div className="grid gap-8 lg:grid-cols-2 xl:grid-cols-3">
+        {categories.map((cat) => (
           <div
             key={cat.id}
-            className="absolute z-10 transition-all duration-500 hover:z-30"
-            style={{
-              left: `${x}%`,
-              top: `${y}%`,
-              transform: "translate(-50%, -50%)",
-            }}
+            className="card-base group"
             onMouseEnter={() => setHoveredCategory(cat)}
             onMouseLeave={() => setHoveredCategory(null)}
           >
-            <div className="relative group/cat">
-              <div className="w-24 h-24 rounded-full border-3 bg-background/95 backdrop-blur-sm flex items-center justify-center text-center shadow-xl" style={{ borderColor: cat.color + "60" }}>
-                <div className="absolute inset-0 rounded-full opacity-0 group-hover/cat:opacity-20 transition-opacity" style={{ backgroundColor: cat.color }} />
-                <div className="relative z-10 text-foreground group-hover/cat:text-white transition-colors">
-                  <p className="text-xs font-bold uppercase tracking-wider leading-tight">{cat.label}</p>
-                </div>
-              </div>
-              
-              {/* Category Label Tooltip */}
-              <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 px-4 py-2 rounded-lg bg-card border-2 border-border text-sm font-bold text-foreground whitespace-nowrap opacity-0 group-hover/cat:opacity-100 transition-opacity pointer-events-none z-20 shadow-lg">
+            {/* Category Header */}
+            <div className="flex items-center gap-3 mb-4 pb-4 border-b border-border">
+              <div 
+                className="w-3 h-3 rounded-full flex-shrink-0"
+                style={{ backgroundColor: cat.color }}
+              />
+              <h3 className="font-bold text-foreground uppercase tracking-wider text-sm">
                 {cat.label}
-              </div>
+              </h3>
             </div>
-          </div>
-        );
-      })}
 
-      {/* Work Nodes - Positioned around their categories */}
-      {categories.map((cat, catIndex) => {
-        const angle = (catIndex / categories.length) * Math.PI * 2 - Math.PI / 2;
-        const catRadius = 280;
-        const catX = 50 + (Math.cos(angle) * catRadius / 4);
-        const catY = 50 + (Math.sin(angle) * catRadius / 4);
-        const nodeRadius = 120;
-
-        return cat.nodes.map((node, nodeIndex) => {
-          const nodeAngle = (nodeIndex / cat.nodes.length) * Math.PI * 2;
-          const x = catX + (Math.cos(nodeAngle) * nodeRadius / 4);
-          const y = catY + (Math.sin(nodeAngle) * nodeRadius / 4);
-
-          return (
-            <div
-              key={node.id}
-              className="absolute z-10 transition-all duration-500 hover:z-30"
-              style={{
-                left: `${x}%`,
-                top: `${y}%`,
-                transform: "translate(-50%, -50%)",
-              }}
-              onMouseEnter={() => setHoveredNode(node)}
-              onMouseLeave={() => setHoveredNode(null)}
-            >
-              <Link
-                href={node.href}
-                className="block group/node"
-                aria-label={`${node.label} - ${statusLabels[node.status]} - ${node.category}`}
-              >
-                <div className="relative">
-                  <div className="w-20 h-20 rounded-2xl bg-card/95 backdrop-blur-sm border-2 flex items-center justify-center text-center shadow-xl" style={{ borderColor: cat.color + "80" }}>
-                    <div className="absolute inset-0 rounded-2xl opacity-0 group-hover/node:opacity-100 transition-opacity" style={{ backgroundColor: cat.color }} />
-                    <div className="relative z-10 px-2">
-                      <p className="text-xs font-bold text-foreground group-hover/node:text-white transition-colors leading-tight">{node.label}</p>
-                      <p className="text-[10px] text-muted-foreground group-hover/node:text-white/80 transition-colors mt-1 font-medium">{statusLabels[node.status]}</p>
-                    </div>
-                  </div>
-                </div>
-              </Link>
-
-              {/* Node Detail Tooltip */}
-              {hoveredNode?.id === node.id && (
+            {/* Category Nodes */}
+            <div className="space-y-3">
+              {cat.nodes.map((node) => (
                 <div
-                  className="absolute left-full top-1/2 -translate-y-1/2 ml-6 w-80 card-base z-30 animate-fade-in pointer-events-auto shadow-2xl"
-                  role="tooltip"
+                  key={node.id}
+                  className="relative"
+                  onMouseEnter={() => setHoveredNode(node)}
+                  onMouseLeave={() => setHoveredNode(null)}
                 >
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style={{ backgroundColor: cat.color + "20" }}>
-                      <svg className="w-6 h-6" style={{ color: cat.color }} fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
-                      </svg>
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <Link href={node.href} className="font-bold text-foreground hover:text-primary transition-colors focus-visible-ring rounded block mb-2 text-lg">
-                        {node.label}
-                      </Link>
-                      <span className={statusStyles[node.status]}>
+                  <Link
+                    href={node.href}
+                    className="block p-4 rounded-lg bg-muted/50 hover:bg-muted transition-all duration-300 border border-transparent hover:border-primary/30 group/node"
+                    aria-label={`${node.label} - ${statusLabels[node.status]} - ${node.category}`}
+                  >
+                    <div className="flex items-start justify-between gap-3">
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center gap-2 mb-1">
+                          <h4 className="font-semibold text-foreground group-hover/node:text-primary transition-colors">
+                            {node.label}
+                          </h4>
+                          {node.external && (
+                            <svg className="w-3 h-3 text-muted-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                            </svg>
+                          )}
+                        </div>
+                        <p className="text-xs text-muted-foreground mb-2">{node.category}</p>
+                        {showDescriptions && (
+                          <p className="text-sm text-muted-foreground leading-relaxed line-clamp-2">
+                            {node.description}
+                          </p>
+                        )}
+                      </div>
+                      <span className={statusStyles[node.status]} style={{ flexShrink: 0 }}>
                         {statusLabels[node.status]}
                       </span>
-                      <p className="text-xs text-muted-foreground mt-2 font-medium">{node.category}</p>
-                      {showDescriptions && (
-                        <p className="text-sm text-muted-foreground mt-3 leading-relaxed">{node.description}</p>
-                      )}
-                      <Link
-                        href={node.href}
-                        className="inline-flex items-center gap-2 text-sm text-primary mt-4 hover:underline focus-visible-ring font-medium"
-                      >
-                        Explore →
-                      </Link>
                     </div>
-                  </div>
-                </div>
-              )}
-            </div>
-          );
-        });
-      })}
+                  </Link>
 
-      {/* Legend - positioned bottom-left to avoid node overlap */}
-      <div className="absolute bottom-4 left-4 z-20 card-base p-4 shadow-xl">
-        <p className="caption text-foreground mb-3 font-bold">Work Status</p>
-        <div className="grid grid-cols-2 gap-x-4 gap-y-2">
-          {[
-            { key: "operating", label: "Operating" },
-            { key: "building", label: "Building" },
-            { key: "pilot", label: "Pilot" },
-            { key: "research", label: "Research" },
-            { key: "planned", label: "Planned" },
-            { key: "vision", label: "Vision" },
-          ].map((item) => (
-            <div key={item.key} className="flex items-center gap-2">
-              <span className={statusStyles[item.key]}>{statusLabels[item.key]}</span>
-              <span className="text-xs text-muted-foreground">{item.label}</span>
+                  {/* Hover Tooltip */}
+                  {hoveredNode?.id === node.id && (
+                    <div 
+                      className="absolute z-20 p-4 rounded-xl bg-card border-2 border-primary/20 shadow-2xl animate-fade-in pointer-events-none"
+                      style={{
+                        left: '100%',
+                        top: '0',
+                        marginLeft: '1rem',
+                        width: '320px',
+                        maxWidth: 'calc(100vw - 2rem)'
+                      }}
+                    >
+                      <div className="flex items-start gap-3">
+                        <div 
+                          className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0"
+                          style={{ backgroundColor: cat.color + '20' }}
+                        >
+                          <svg className="w-5 h-5" style={{ color: cat.color }} fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+                          </svg>
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <Link href={node.href} className="font-bold text-foreground hover:text-primary transition-colors block mb-1">
+                            {node.label}
+                          </Link>
+                          <span className={statusStyles[node.status]}>
+                            {statusLabels[node.status]}
+                          </span>
+                          <p className="text-xs text-muted-foreground mt-2">{node.category}</p>
+                          {showDescriptions && (
+                            <p className="text-sm text-muted-foreground mt-2 leading-relaxed">
+                              {node.description}
+                            </p>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </div>
   );
