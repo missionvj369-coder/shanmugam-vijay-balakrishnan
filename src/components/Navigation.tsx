@@ -101,9 +101,9 @@ export function Navigation() {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors focus-visible-ring ${
+                className={`px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 focus-visible-ring ${
                   pathname === item.href
-                    ? "text-primary bg-accent"
+                    ? "text-white bg-primary shadow-lg"
                     : "text-muted-foreground hover:text-foreground hover:bg-accent"
                 }`}
                 aria-current={pathname === item.href ? "page" : undefined}
@@ -315,9 +315,9 @@ export function Navigation() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`px-3 py-3 rounded-md text-base font-medium transition-colors ${
+                  className={`px-3 py-3 rounded-md text-base font-medium transition-all duration-200 ${
                     pathname === item.href
-                      ? "bg-accent text-primary"
+                      ? "bg-primary text-white shadow-lg"
                       : "text-foreground hover:bg-accent"
                   }`}
                   aria-current={pathname === item.href ? "page" : undefined}
