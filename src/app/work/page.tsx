@@ -5,7 +5,7 @@ import { WorkMap } from "@/components/WorkMap";
 
 export const metadata: Metadata = {
   title: "Work",
-  description: "Explore the complete body of work — community economies, intelligent technologies, civilizational systems, decentralized infrastructure, knowledge civilizations, and creative systems.",
+  description: "Explore the complete body of work — community, intelligence, civilization, technology, and creation.",
   openGraph: {
     title: "Work — Shanmugam Vijay Balakrishnan",
     description: "Explore the complete body of work connecting community, intelligence, civilization, technology, decentralization, and creation.",
@@ -28,7 +28,7 @@ export default function WorkPage() {
                 The Body of Work
               </h1>
               <p className="body-lg text-muted-foreground max-w-2xl mx-auto">
-                An interactive map showing how community, intelligence, civilization, technology, decentralization, and creation connect through distinct projects and organizations. Each operates with its own legal identity while contributing to a coherent civilizational vision.
+                Connected projects and organizations across community, intelligence, civilization, technology, and creation.
               </p>
             </div>
           </div>
@@ -60,14 +60,14 @@ export default function WorkPage() {
                   color: "#22c55e",
                   items: [
                     { name: "Boysenberry", status: "BUILDING", href: "/boysenberry", desc: "Community-centered economic model" },
-                    { name: "Creator Community", status: "BUILDING", href: "/creator-community", desc: "Execution layer for civilizational creation" },
+                    { name: "Creator Community", status: "BUILDING", href: "/creator-community", desc: "Execution layer for creation" },
                   ],
                 },
                 {
                   category: "INTELLIGENCE",
                   color: "#3b82f6",
                   items: [
-                    { name: "Universal Guard Trust", status: "OPERATING", href: "/universal-guard-trust", desc: "Global framework for civilizational learning" },
+                    { name: "Universal Guard Trust", status: "OPERATING", href: "/universal-guard-trust", desc: "Global framework for learning" },
                     { name: "Integrated Intelligence", status: "RESEARCH", href: "/universal-guard-trust#integrated-intelligence", desc: "Core research on human evolution" },
                     { name: "Heaven on Earth", status: "BUILDING", href: "/heaven-on-earth", desc: "Civilizational architecture" },
                   ],
@@ -84,8 +84,8 @@ export default function WorkPage() {
                   category: "DECENTRALIZATION",
                   color: "#8b5cf6",
                   items: [
-                    { name: "Zentium", status: "BUILDING", href: "/zentium", desc: "Blockchain & decentralized infrastructure" },
-                    { name: "Blockchain Systems", status: "RESEARCH", href: "/technology/blockchain", desc: "Decentralized infrastructure research" },
+                    { name: "Zentium", status: "BUILDING", href: "/zentium", desc: "Blockchain & decentralized systems" },
+                    { name: "Blockchain Systems", status: "RESEARCH", href: "/technology/blockchain", desc: "Decentralized systems research" },
                   ],
                 },
                 {
@@ -102,7 +102,7 @@ export default function WorkPage() {
                   color: "#ef4444",
                   items: [
                     { name: "Music", status: "OPERATING", href: "/media#music", desc: "Original compositions" },
-                    { name: "Podcasts", status: "OPERATING", href: "/media#podcasts", desc: "Systems & civilization conversations" },
+                    { name: "Podcasts", status: "OPERATING", href: "/media#podcasts", desc: "Systems conversations" },
                     { name: "Video & Film", status: "BUILDING", href: "/media#video", desc: "Cinematic creation" },
                     { name: "Writing", status: "OPERATING", href: "/media#writing", desc: "Essays & frameworks" },
                   ],
@@ -185,7 +185,7 @@ export default function WorkPage() {
               </h2>
               <div className="text-left space-y-4 text-sm text-muted-foreground">
                 <p>
-                  This work map shows <strong className="text-foreground">related areas of work</strong>, not a single legal organization. Each entity maintains clear separation:
+                  This work map shows <strong className="text-foreground">related areas of work</strong>, not a single legal organization.
                 </p>
                 <ul className="space-y-2 list-disc list-inside">
                   <li><strong>Boysenberry Marketing Private Limited</strong> — Private limited company (India)</li>
@@ -194,7 +194,7 @@ export default function WorkPage() {
                   <li><strong>Creator Community</strong> — Open execution layer / project catalogue</li>
                   <li><strong>Kingdom of Shiva</strong> — Independent knowledge civilization initiative</li>
                   <li><strong>Zentium</strong> — Decentralized blockchain project</li>
-                  <li><strong>Technology / Creative Systems</strong> — Personal R&D and open source work</li>
+                  <li><strong>Technology / Creative Systems</strong> — Personal R&D and open source</li>
                 </ul>
                 <p>
                   The personal website explains relationships between them, but does not claim they are all the same organization.

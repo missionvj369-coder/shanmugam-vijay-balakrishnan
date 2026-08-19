@@ -5,7 +5,7 @@ import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "OpenMontage — AI-Assisted Creative Systems",
-  description: "Ongoing work around AI-assisted video creation. Open models, local AI, video generation, voice, music, cinematic creation, automation, creative pipelines. Development status clearly marked.",
+  description: "AI-assisted video creation. Open models, local AI, cinematic pipelines.",
   openGraph: {
     title: "OpenMontage — AI-Assisted Creative Systems",
     description: "Open models. Local inference. Cinematic pipelines. Creative automation.",
@@ -14,14 +14,14 @@ export const metadata: Metadata = {
 };
 
 const areas = [
-  { title: "Open Models", description: "Prioritizing open-weight video, audio, and language models. No vendor lock-in. Community-auditable. Locally runnable." },
+  { title: "Open Models", description: "Open-weight video, audio, and language models. No vendor lock-in. Community-auditable. Locally runnable." },
   { title: "Local AI", description: "Inference on local hardware. Privacy-preserving. Offline-capable. No API dependency. Consumer GPU targets." },
-  { title: "Video Generation", description: "Text-to-video, image-to-video, video-to-video. Consistency. Temporal coherence. Cinematic control. Long-form capability." },
-  { title: "Voice", description: "Text-to-speech, voice cloning, emotional control, multilingual, singing synthesis. Local. Real-time capable." },
-  { title: "Music", description: "Generative music, stem separation, style transfer, arrangement assistance, live performance tools. Open models." },
-  { title: "Cinematic Creation", description: "Shot composition, lighting direction, color grading, editing assistance, narrative structure, pacing control." },
-  { title: "Automation", description: "Pipeline orchestration, batch processing, asset management, version control for creative assets, CI/CD for content." },
-  { title: "Creative Pipelines", description: "End-to-end workflows: script → storyboard → animatic → rough cut → final. AI at each stage. Human direction throughout." },
+  { title: "Video Generation", description: "Text-to-video, image-to-video, video-to-video. Consistency. Cinematic control. Long-form." },
+  { title: "Voice", description: "Text-to-speech, voice cloning, emotional control, multilingual, singing synthesis. Local." },
+  { title: "Music", description: "Generative music, stem separation, style transfer, arrangement assistance. Open models." },
+  { title: "Cinematic Creation", description: "Shot composition, lighting direction, color grading, editing assistance, narrative structure." },
+  { title: "Automation", description: "Pipeline orchestration, batch processing, asset management, version control, CI/CD." },
+  { title: "Creative Pipelines", description: "End-to-end workflows: script → storyboard → animatic → rough cut → final. AI assists. Human directs." },
 ];
 
 const status = [
@@ -56,7 +56,7 @@ export default function OpenMontagePage() {
                 OPENMONTAGE
               </h1>
               <p className="body-lg text-muted-foreground max-w-2xl mx-auto">
-                AI-assisted video creation. Open models. Local inference. Cinematic pipelines. Creative automation.
+                AI-assisted video creation. Open models. Local inference. Cinematic pipelines.
               </p>
               <div className="flex flex-wrap items-center justify-center gap-2 mt-6">
                 <span className="status-badge status-building">BUILDING</span>
@@ -73,7 +73,7 @@ export default function OpenMontagePage() {
               <h2 id="what-heading" className="heading-lg font-light text-foreground text-center mb-12">
                 What This Is
               </h2>
-              <div className="prose-content text-muted-foreground space-y-6 text-center max-w-2xl mx-auto">
+              <div className="prose-content text-muted-foreground space-y-4 text-center max-w-2xl mx-auto">
                 <p>
                   OpenMontage is the ongoing work around <strong className="text-foreground">AI-assisted video creation</strong> — a deep technical trajectory within the Creative Technology area.
                 </p>
@@ -81,7 +81,7 @@ export default function OpenMontagePage() {
                   It is not a single tool. It is a <strong className="text-foreground">pipeline architecture</strong> — open models, local inference, cinematic control, creative automation — designed for production use, not demos.
                 </p>
                 <p>
-                  <strong className="text-foreground">Core thesis:</strong> The best creative AI runs locally, uses open models, keeps human direction central, and produces cinematic-quality output.
+                  <strong className="text-foreground">Core thesis:</strong> Best creative AI runs locally, uses open models, keeps human direction central.
                 </p>
               </div>
             </div>
@@ -96,7 +96,7 @@ export default function OpenMontagePage() {
                 Relevant Areas
               </h2>
               <p className="body-lg text-muted-foreground text-center mb-12">
-                Eight interconnected technical domains. Each feeds the pipeline.
+                Eight interconnected technical domains.
               </p>
               <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
                 {areas.map((area) => (
@@ -118,7 +118,7 @@ export default function OpenMontagePage() {
                 Development Status — Transparent
               </h2>
               <p className="body-lg text-muted-foreground text-center mb-12">
-                Every component explicitly categorized. No claiming production capabilities that have not been verified.
+                Explicit status for every component.
               </p>
               <div className="grid gap-6 md:grid-cols-3">
                 {status.map((section) => (

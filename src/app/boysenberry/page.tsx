@@ -5,7 +5,7 @@ import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Boysenberry Marketing Private Limited",
-  description: "Community-centered economic model combining local participation with modern business and technology. Going back to our roots — local production, community stores, community purchase, local savings, referral participation, business profit, community development, local money circulation.",
+  description: "Community-centered economic model. Local participation + modern business + technology.",
   openGraph: {
     title: "Boysenberry Marketing Private Limited — Community Economy",
     description: "Building community economies through local participation, modern business, and technology.",
@@ -17,31 +17,31 @@ const communityEconomyModel = [
   {
     step: 1,
     title: "People Buy Useful Products",
-    description: "Community members purchase essential, organic, and locally produced products through the community store. No change in buying behavior — just a different store.",
+    description: "Community members purchase essential, organic, and locally produced products through the community store.",
     status: "OPERATING",
   },
   {
     step: 2,
     title: "Local Participation Creates Economic Activity",
-    description: "Local producers supply the store. Community members operate the store. Money circulates within the pincode. Jobs are created locally. Skills are developed locally.",
+    description: "Local producers supply the store. Community members operate it. Money circulates within the pincode. Jobs and skills develop locally.",
     status: "BUILDING",
   },
   {
     step: 3,
     title: "Referral Participants Earn Incentives",
-    description: "According to the actual program design, community members who refer others to participate can earn incentives. This is not passive income — it rewards active community building.",
+    description: "Community members who refer others can earn incentives. Rewards active community building — not passive income.",
     status: "BUILDING",
   },
   {
     step: 4,
     title: "Profit Allocation to Community Development",
-    description: "A defined portion of eligible business profit is allocated to local community development according to the actual operating/legal model. Infrastructure, education, health, ecology — decided by the community.",
+    description: "A defined portion of business profit allocated to local community development. Infrastructure, education, health, ecology — decided by the community.",
     status: "PLANNED",
   },
   {
     step: 5,
     title: "Greater Local Value Circulation",
-    description: "The goal: economic value circulates within local communities rather than being extracted. More local production. More local employment. More local savings. More community resilience.",
+    description: "Economic value circulates within local communities rather than being extracted. More production, employment, savings, resilience.",
     status: "VISION",
   },
 ];
@@ -100,7 +100,7 @@ export default function BoysenberryPage() {
                 BOYSENBERRY MARKETING PRIVATE LIMITED
               </h1>
               <p className="body-lg text-muted-foreground max-w-2xl mx-auto">
-                Community-centered economic model combining local participation with modern business and technology.
+                Community-centered economic model. Local participation + modern business + technology.
               </p>
               <div className="flex flex-wrap items-center justify-center gap-2 mt-6">
                 <span className="status-badge status-building">BUILDING</span>
@@ -117,15 +117,12 @@ export default function BoysenberryPage() {
               <h2 id="vision-heading" className="heading-lg font-light text-foreground text-center mb-12">
                 Core Vision: Going Back to Our Roots
               </h2>
-              <div className="prose-content text-muted-foreground space-y-6 text-center max-w-2xl mx-auto">
+              <div className="prose-content text-muted-foreground space-y-4 text-center max-w-2xl mx-auto">
                 <p>
                   Modern economies extract value from communities. Boysenberry reverses this: community participation creates value that circulates locally.
                 </p>
                 <p>
-                  The objective is to combine <strong className="text-foreground">local community participation</strong> with <strong className="text-foreground">modern business</strong> and <strong className="text-foreground">technology</strong>.
-                </p>
-                <p>
-                  Not charity. Not aid. A sustainable economic model where the community is the owner, operator, and beneficiary.
+                  Combining <strong className="text-foreground">local community participation</strong> with <strong className="text-foreground">modern business</strong> and <strong className="text-foreground">technology</strong>.
                 </p>
               </div>
 

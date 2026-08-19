@@ -5,7 +5,7 @@ import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Creative AI",
-  description: "AI-assisted video, generative music, voice synthesis, cinematic pipelines, creative automation, open creative tools. OpenMontage, video generation, creative automation pipelines.",
+  description: "AI-assisted video, generative music, voice synthesis, cinematic pipelines.",
   openGraph: {
     title: "Creative AI — Technology",
     description: "AI-assisted creative systems. Open models. Local inference. Cinematic pipelines.",
@@ -14,11 +14,11 @@ export const metadata: Metadata = {
 };
 
 const creativeAreas = [
-  { title: "AI-Assisted Video", description: "Text-to-video, image-to-video, video-to-video. Consistency. Temporal coherence. Cinematic control. Long-form capability." },
-  { title: "Generative Music", description: "Generative music, stem separation, style transfer, arrangement assistance, live performance tools. Open models." },
-  { title: "Voice Synthesis", description: "Text-to-speech, voice cloning, emotional control, multilingual, singing synthesis. Local. Real-time capable." },
-  { title: "Cinematic Pipelines", description: "Shot composition, lighting direction, color grading, editing assistance, narrative structure, pacing control." },
-  { title: "Creative Automation", description: "Pipeline orchestration, batch processing, asset management, version control for creative assets, CI/CD for content." },
+  { title: "AI-Assisted Video", description: "Text-to-video, image-to-video, video-to-video. Consistency. Cinematic control. Long-form." },
+  { title: "Generative Music", description: "Generative music, stem separation, style transfer, arrangement assistance. Open models." },
+  { title: "Voice Synthesis", description: "Text-to-speech, voice cloning, emotional control, multilingual, singing synthesis. Local." },
+  { title: "Cinematic Pipelines", description: "Shot composition, lighting direction, color grading, editing assistance, narrative structure." },
+  { title: "Creative Automation", description: "Pipeline orchestration, batch processing, asset management, version control, CI/CD." },
   { title: "Open Creative Tools", description: "Open-source creative software. Community-owned. Forkable. Extensible. Not a SaaS trap." },
 ];
 
@@ -46,7 +46,7 @@ export default function CreativeAIPage() {
                 CREATIVE AI
               </h1>
               <p className="body-lg text-muted-foreground max-w-2xl mx-auto">
-                AI-assisted creative systems. Open models. Local inference. Cinematic pipelines. Creative automation.
+                AI-assisted creative systems. Open models. Local inference.
               </p>
               <div className="flex flex-wrap items-center justify-center gap-2 mt-6">
                 <span className="status-badge status-building">BUILDING</span>
@@ -64,7 +64,7 @@ export default function CreativeAIPage() {
                 Creative AI Areas
               </h2>
               <p className="body-lg text-muted-foreground text-center mb-12">
-                Six interconnected technical domains. Each feeds the broader creative strategy.
+                Six interconnected technical domains.
               </p>
               <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                 {creativeAreas.map((area) => (
@@ -106,10 +106,10 @@ export default function CreativeAIPage() {
               </h2>
               <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                 {[
-                  { title: "OpenMontage", description: "AI-assisted video creation pipeline.", href: "/technology/openmontage", status: "BUILDING" },
-                  { title: "Technology / AI", description: "AI research and systems.", href: "/technology/ai", status: "BUILDING" },
+                  { title: "OpenMontage", description: "AI-assisted video creation.", href: "/technology/openmontage", status: "BUILDING" },
+                  { title: "Technology / AI", description: "AI research.", href: "/technology/ai", status: "BUILDING" },
                   { title: "Media", description: "Creative output showcase.", href: "/media", status: "BUILDING" },
-                  { title: "Creator Community", description: "Execution layer for creative projects.", href: "/creator-community", status: "BUILDING" },
+                  { title: "Creator Community", description: "Execution layer.", href: "/creator-community", status: "BUILDING" },
                   { title: "Technology", description: "Technology overview.", href: "/technology", status: "BUILDING" },
                 ].map((project) => (
                   <Link key={project.title} href={project.href} className="card-interactive group">

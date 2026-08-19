@@ -5,7 +5,7 @@ import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Media",
-  description: "Music, podcasts, video, film, writing. The personal site acts as the discovery/canonical personal archive. Actual audio/video hosted externally on verified platforms.",
+  description: "Music, podcasts, video, film, writing. Discovery layer and canonical personal archive. Content hosted on verified external platforms.",
   openGraph: {
     title: "Media — Music, Podcasts, Video, Writing",
     description: "Creative output across music, podcasts, video, film, and writing.",
@@ -51,7 +51,7 @@ const mediaSections = [
   },
 ];
 
-const hostingNote = "Actual audio/video content is hosted externally on verified platforms. The personal site acts as the discovery layer and canonical personal archive — linking to official platforms rather than hosting media directly.";
+const hostingNote = "Content hosted externally on verified platforms. This site is the discovery layer and canonical archive — linking to official platforms.";
 
 const platformLinks = [
   { name: "YouTube", url: "https://youtube.com", description: "Primary video platform" },
@@ -135,7 +135,7 @@ export default function MediaPage() {
                 Verified Platforms
               </h2>
               <p className="body-lg text-muted-foreground text-center mb-12">
-                Content is distributed through these verified external platforms.
+                Verified external platforms.
               </p>
               <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
                 {platformLinks.map((platform) => (
@@ -172,11 +172,11 @@ export default function MediaPage() {
               <div className="space-y-4 text-sm text-muted-foreground">
                 <div className="card-base p-4">
                   <h3 className="font-medium text-foreground mb-2">No Heavy Media Admin System</h3>
-                  <p>This site does not include a media management system, upload interface, or content delivery network. External platforms handle hosting, streaming, and distribution.</p>
+                  <p>No media management system or CDN. External platforms handle hosting and distribution.</p>
                 </div>
                 <div className="card-base p-4">
                   <h3 className="font-medium text-foreground mb-2">Discovery Layer</h3>
-                  <p>The personal site serves as the canonical archive and discovery layer. Visitors understand what media exists and where to find it. Actual playback happens on external platforms.</p>
+                  <p>The personal site is the canonical archive and discovery layer. Playback happens on external platforms.</p>
                 </div>
                 <div className="card-base p-4">
                   <h3 className="font-medium text-foreground mb-2">Status Transparency</h3>

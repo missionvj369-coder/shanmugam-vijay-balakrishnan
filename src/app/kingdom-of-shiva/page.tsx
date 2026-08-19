@@ -5,7 +5,7 @@ import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Kingdom of Shiva",
-  description: "A Virtual Civilization of Hindu Knowledge, Heritage, Philosophy and Living Traditions. Texts, philosophy, temples, sacred geography, history, archaeology, science, mathematics, medicine, yoga, languages, arts, music, festivals, living traditions, global communities. Evidence-aware exploration.",
+  description: "Virtual civilization of Hindu knowledge, heritage, philosophy and living traditions.",
   openGraph: {
     title: "Kingdom of Shiva — Hindu Knowledge Civilization",
     description: "Virtual civilization of Hindu knowledge, heritage, philosophy and living traditions.",
@@ -67,7 +67,7 @@ export default function KingdomOfShivaPage() {
                 KINGDOM OF SHIVA
               </h1>
               <p className="body-lg text-muted-foreground max-w-2xl mx-auto">
-                A Virtual Civilization of Hindu Knowledge, Heritage, Philosophy and Living Traditions.
+                Hindu knowledge civilization. Heritage, philosophy, living traditions.
               </p>
               <div className="flex flex-wrap items-center justify-center gap-2 mt-6">
                 <span className="status-badge status-building">BUILDING</span>
@@ -84,7 +84,7 @@ export default function KingdomOfShivaPage() {
               <h2 id="what-heading" className="heading-lg font-light text-foreground text-center mb-12">
                 What This Is
               </h2>
-              <div className="prose-content text-muted-foreground space-y-6 text-center max-w-2xl mx-auto">
+              <div className="prose-content text-muted-foreground space-y-4 text-center max-w-2xl mx-auto">
                 <p>
                   Kingdom of Shiva is a <strong className="text-foreground">separate civilizational knowledge initiative</strong> — not a religious organization, not a sect, not a guru's platform.
                 </p>
@@ -92,10 +92,10 @@ export default function KingdomOfShivaPage() {
                   It applies the Universal Guard Trust framework (open architecture, evidence-aware, continuous learning) to a specific knowledge tradition: <strong className="text-foreground">Hindu civilization</strong>.
                 </p>
                 <p>
-                  <strong className="text-foreground">Working identity:</strong> A Virtual Civilization of Hindu Knowledge, Heritage, Philosophy and Living Traditions.
+                  <strong className="text-foreground">Working identity:</strong> Virtual Civilization of Hindu Knowledge, Heritage, Philosophy and Living Traditions.
                 </p>
                 <p>
-                  The universal principles (UGT) tested in a particular domain (Hindu knowledge). Not abstract civilization — this civilization. Evidence-aware. Living. Global.
+                  Universal principles (UGT) tested in a particular domain (Hindu knowledge). Evidence-aware. Living. Global.
                 </p>
               </div>
             </div>
@@ -110,7 +110,7 @@ export default function KingdomOfShivaPage() {
                 Coverage — 16 Domains
               </h2>
               <p className="body-lg text-muted-foreground text-center mb-12">
-                Hindu civilization is not one thing. It is the metabolism across these interconnected domains.
+                16 interconnected domains.
               </p>
               <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4">
                 {coverage.map((domain) => (
@@ -120,7 +120,7 @@ export default function KingdomOfShivaPage() {
                 ))}
               </div>
               <p className="text-center text-sm text-muted-foreground mt-8">
-                Each domain: primary sources, living practitioners, scientific interfaces, global expressions, evidence base, open questions.
+                Each domain: primary sources, living practitioners, evidence base.
               </p>
             </div>
           </div>
@@ -134,7 +134,7 @@ export default function KingdomOfShivaPage() {
                 Methodology
               </h2>
               <p className="body-lg text-muted-foreground text-center mb-12">
-                How we approach Hindu knowledge civilization. Six commitments.
+                Approach to Hindu knowledge civilization.
               </p>
               <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                 {methodology.map((item) => (
@@ -179,7 +179,7 @@ export default function KingdomOfShivaPage() {
                   Kingdom of Shiva is a <strong className="text-foreground">particular application</strong> of the Universal Guard Trust universal framework.
                 </p>
                 <p>
-                  UGT provides the architecture (principles, learning loop, flourishing metrics, open architecture). Kingdom of Shiva provides the <strong className="text-foreground">domain-specific instantiation</strong> — Hindu knowledge civilization as a living, evidence-aware, globally connected virtual civilization.
+                   UGT provides the architecture. Kingdom of Shiva provides the <strong className="text-foreground">domain-specific instantiation</strong> — Hindu knowledge civilization as a living, evidence-aware, globally connected virtual civilization.
                 </p>
                 <p>
                   <strong className="text-foreground">UGT = Universal Framework.</strong> Kingdom of Shiva = Particular Civilization.

@@ -5,7 +5,7 @@ import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Universal Guard Trust",
-  description: "Global framework for civilizational learning and creation. Human Evolution → Integrated Intelligence → Human Flourishing → Civilization Transformation → Conscious Civilization → Heaven on Earth. Open architecture. Canonical source: ugtglobal.space",
+  description: "Open architecture for civilizational learning and creation.",
   openGraph: {
     title: "Universal Guard Trust — Civilizational Framework",
     description: "Open architecture for continuous civilizational learning and creation.",
@@ -17,38 +17,38 @@ const coreChain = [
   {
     step: 1,
     title: "HUMAN EVOLUTION",
-    description: "Understanding where we come from. Biological, cultural, cognitive, spiritual evolution. The substrate of all future possibility.",
+    description: "Biological, cultural, cognitive, spiritual evolution. The substrate of future possibility.",
   },
   {
     step: 2,
     title: "INTEGRATED INTELLIGENCE",
-    description: "Human wisdom + machine capability + collective knowledge + ecological awareness. Not AI vs human. Integrated intelligence as cognitive architecture.",
+    description: "Human wisdom + machine capability + collective knowledge + ecological awareness. Integrated intelligence.",
   },
   {
     step: 3,
     title: "HUMAN FLOURISHING",
-    description: "The metric. Autonomy, competence, relatedness, meaning, vitality, transcendence. Every system evaluated against this.",
+    description: "The metric: autonomy, competence, relatedness, meaning, vitality, transcendence.",
   },
   {
     step: 4,
     title: "CIVILIZATION TRANSFORMATION",
-    description: "Systems change at civilizational scale. Economy, governance, education, health, ecology, technology — redesigned for flourishing.",
+    description: "Economy, governance, education, health, ecology, technology — redesigned for flourishing.",
   },
   {
     step: 5,
     title: "CONSCIOUS CIVILIZATION",
-    description: "A civilization that knows itself. Self-monitoring. Self-correcting. Learning continuously. Awareness as infrastructure.",
+    description: "A civilization that knows itself. Self-monitoring, self-correcting, learning continuously.",
   },
   {
     step: 6,
     title: "HEAVEN ON EARTH",
-    description: "The working architecture. Not a utopia. A living system design for conscious civilization. Evolving. Evidence-based. Measurable.",
+    description: "A living system design for conscious civilization. Evolving, evidence-based, measurable.",
   },
 ];
 
 const architecturePrinciples = [
   "Open architecture — no gatekeeping, no proprietary lock-in",
-  "Continuous learning — Understand → Connect → Create → Test → Measure → Learn → Share → Adapt → Create Again",
+  "Continuous learning — Understand → Connect → Create → Test → Measure → Learn → Adapt",
   "Evidence-aware — claims tested, measured, documented, shared",
   "Principle-driven — 12 core principles shape every layer",
   "Modular — domains, patterns, projects can be forked, adapted, recombined",
@@ -64,11 +64,11 @@ const myRole = [
   },
   {
     title: "Architect",
-    description: "Designed the core chain, Integrated Intelligence framework, Heaven on Earth blueprint architecture.",
+    description: "Designed the core chain, Integrated Intelligence framework, Heaven on Earth blueprint.",
   },
   {
     title: "Builder",
-    description: "Building the execution layer (Creator Community), knowledge civilization (Kingdom of Shiva), and community economy (Boysenberry) as expressions of UGT principles.",
+    description: "Building the execution layer (Creator Community), knowledge civilization (Kingdom of Shiva), and community economy (Boysenberry).",
   },
   {
     title: "Steward",
@@ -91,7 +91,7 @@ export default function UniversalGuardTrustPage() {
                 UNIVERSAL GUARD TRUST
               </h1>
               <p className="body-lg text-muted-foreground max-w-2xl mx-auto">
-                Open architecture for continuous civilizational learning and creation.
+                Open architecture for civilizational learning and creation.
               </p>
               <div className="flex flex-wrap items-center justify-center gap-2 mt-6">
                 <span className="status-badge status-operating">OPERATING</span>
@@ -115,7 +115,7 @@ export default function UniversalGuardTrustPage() {
                 The Core Chain
               </h2>
               <p className="body-lg text-muted-foreground text-center mb-12">
-                Six stages. Each enables the next. Not a prophecy — a design specification.
+                Six stages. Each enables the next. A design specification.
               </p>
               <div className="space-y-6">
                 {coreChain.map((stage) => (
@@ -147,7 +147,7 @@ export default function UniversalGuardTrustPage() {
                 Architecture Principles
               </h2>
               <p className="body-lg text-muted-foreground text-center mb-12">
-                These principles constrain every layer of UGT — from the core chain to individual projects.
+                Principles that constrain every layer of UGT.
               </p>
               <ul className="space-y-3">
                 {architecturePrinciples.map((principle) => (
@@ -169,7 +169,7 @@ export default function UniversalGuardTrustPage() {
                 The Continuous Learning Loop
               </h2>
               <p className="body-lg text-muted-foreground text-center mb-12">
-                This is not a methodology. It is the nature of living systems. Fixed systems die. Learning systems evolve.
+                Not a methodology. The nature of living systems.
               </p>
               <div className="grid gap-4 md:grid-cols-3 lg:grid-cols-9">
                 {[
@@ -216,7 +216,7 @@ export default function UniversalGuardTrustPage() {
                 My Role & Relationship to UGT
               </h2>
               <p className="body-lg text-muted-foreground text-center mb-12">
-                UGT is a global framework. This website explains my role — it does not speak for the entire trust.
+                UGT is a global framework. This website explains my role.
               </p>
               <div className="grid gap-6 md:grid-cols-2">
                 {myRole.map((role) => (
@@ -238,7 +238,7 @@ export default function UniversalGuardTrustPage() {
                 Projects Expressing UGT Principles
               </h2>
               <p className="body-lg text-muted-foreground text-center mb-12">
-                These are distinct entities. They share principles. They are not UGT.
+                Distinct entities. Shared principles. Not UGT.
               </p>
               <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                 {[
@@ -272,19 +272,19 @@ export default function UniversalGuardTrustPage() {
               <div className="space-y-4 text-sm text-muted-foreground">
                 <div className="card-base p-4">
                   <h3 className="font-medium text-foreground mb-2">Canonical Source</h3>
-                  <p>The canonical UGT entity source is <a href="https://www.ugtglobal.space/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">ugtglobal.space</a>. This personal website does not copy the entire UGT website. It explains my role and relationship to the project.</p>
+                  <p>The canonical UGT source is <a href="https://www.ugtglobal.space/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">ugtglobal.space</a>. This website explains my role and relationship to UGT.</p>
                 </div>
                 <div className="card-base p-4">
                   <h3 className="font-medium text-foreground mb-2">Entity Separation</h3>
-                  <p>Universal Guard Trust is a global trust/framework. It is not Boysenberry Marketing Private Limited, not Zentium, not Kingdom of Shiva, not Creator Community. The personal website explains relationships but does not merge identities.</p>
+                  <p>Universal Guard Trust is a global trust/framework. It is not Boysenberry, Zentium, Kingdom of Shiva, or Creator Community. The website explains relationships without merging identities.</p>
                 </div>
                 <div className="card-base p-4">
                   <h3 className="font-medium text-foreground mb-2">No Completed Solution Claim</h3>
-                  <p>UGT does not claim the Blueprint is a completed solution to civilization. It is presented as an evolving working architecture. The learning loop is continuous.</p>
+                  <p>UGT does not claim the Blueprint is a completed solution. It is an evolving working architecture. The learning loop is continuous.</p>
                 </div>
                 <div className="card-base p-4">
                   <h3 className="font-medium text-foreground mb-2">UGT India</h3>
-                  <p>UGT India is the local implementation arm of the Universal Guard Trust framework in India. Distinct entity. Same principles. Local context.</p>
+                  <p>UGT India is the local implementation of UGT in India. Distinct entity. Same principles. Local context.</p>
                 </div>
               </div>
             </div>

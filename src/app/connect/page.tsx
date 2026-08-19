@@ -5,7 +5,7 @@ import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Connect",
-  description: "How to engage with the work. Build, collaborate, research, technology, community, creative, partnership, media. Legitimate contact channels only. No private personal information exposed.",
+  description: "How to engage with the work. Build, collaborate, research, create, partner. Legitimate contact channels only.",
   openGraph: {
     title: "Connect — Engage with the Work",
     description: "Build, collaborate, research, partner. How to engage.",
@@ -97,7 +97,7 @@ export default function ConnectPage() {
                 CONNECT
               </h1>
               <p className="body-lg text-muted-foreground max-w-2xl mx-auto">
-                How to engage with the work. Build, collaborate, research, create, partner.
+                How to engage with the work.
               </p>
               <div className="flex flex-wrap items-center justify-center gap-2 mt-6">
                 <span className="text-sm text-muted-foreground">8 Engagement Types</span>
@@ -114,7 +114,7 @@ export default function ConnectPage() {
                 Ways to Engage
               </h2>
               <p className="body-lg text-muted-foreground text-center mb-12">
-                Eight categories. Each a legitimate pathway into the work.
+                Eight engagement pathways.
               </p>
               <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
                 {engagementTypes.map((type) => (
@@ -139,7 +139,7 @@ export default function ConnectPage() {
                 Contact Channels
               </h2>
               <p className="body-lg text-muted-foreground text-center mb-12">
-                Legitimate contact channels only. No private information exposed.
+                Legitimate contact channels only.
               </p>
               <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
                 {contactChannels.map((channel) => (
@@ -249,7 +249,7 @@ export default function ConnectPage() {
                 Explore the Work First
               </h2>
               <p className="body-lg text-muted-foreground mb-8">
-                Understanding the work is the best preparation for meaningful engagement.
+                Understand the work first.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Link href="/work" className="btn-primary">

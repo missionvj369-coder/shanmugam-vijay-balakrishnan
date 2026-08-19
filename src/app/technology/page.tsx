@@ -5,7 +5,7 @@ import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Technology",
-  description: "Technology as infrastructure for human possibility. AI, Blockchain, VR, Web, Metaverse, Creative Technology, Automation, Video Generation, Open Source Systems. Technology is not the destination. Technology is infrastructure for human possibility.",
+  description: "Technology as infrastructure for human possibility. AI, Blockchain, VR, Web, Creative Technology, Automation, Open Source.",
   openGraph: {
     title: "Technology — Infrastructure for Human Possibility",
     description: "AI, Blockchain, VR, Web, Metaverse, Creative Technology. Technology as instrument, not destination.",
@@ -16,55 +16,55 @@ export const metadata: Metadata = {
 const techAreas = [
   {
     title: "AI",
-    description: "Large language models, local AI, AI-assisted creation, agent systems, cognitive architectures, integrated intelligence research.",
+    description: "LLMs, local AI, AI-assisted creation, agent systems, cognitive architectures.",
     href: "/technology/ai",
     status: "BUILDING",
   },
   {
     title: "Blockchain",
-    description: "Zentium protocol, community money, decentralized governance, DAO tooling, decentralized identity, community-owned infrastructure.",
+    description: "Zentium protocol, community money, decentralized governance, DAO tooling.",
     href: "/technology/blockchain",
     status: "BUILDING",
   },
   {
     title: "VR",
-    description: "Immersive interfaces, spatial computing, embodied digital presence, virtual community spaces, 3D governance interfaces.",
+    description: "Immersive interfaces, spatial computing, virtual community spaces.",
     href: "/technology/vr",
     status: "RESEARCH",
   },
   {
     title: "Web",
-    description: "Modern web architectures, decentralized web, local-first software, progressive enhancement, open web standards.",
+    description: "Modern web architectures, decentralized web, local-first software.",
     href: "/technology/web",
     status: "BUILDING",
   },
   {
     title: "Metaverse",
-    description: "Persistent virtual worlds, interoperable identity, digital ownership, community economies in virtual spaces, cross-world portability.",
+    description: "Persistent virtual worlds, interoperable identity, digital ownership.",
     href: "/technology/metaverse",
     status: "RESEARCH",
   },
   {
     title: "Creative Technology",
-    description: "AI-assisted video, generative music, voice synthesis, cinematic pipelines, creative automation, open creative tools.",
+    description: "AI-assisted video, generative music, voice synthesis, cinematic pipelines.",
     href: "/technology/creative-ai",
     status: "BUILDING",
   },
   {
     title: "Automation",
-    description: "Workflow automation, agent orchestration, CI/CD for creative pipelines, infrastructure as code, self-healing systems.",
+    description: "Workflow automation, agent orchestration, infrastructure as code.",
     href: "/technology/automation",
     status: "BUILDING",
   },
   {
     title: "Video Generation",
-    description: "Open video models, local inference, cinematic control, long-form generation, consistency, creative direction tools.",
+    description: "Open video models, local inference, cinematic control.",
     href: "/technology/video-generation",
     status: "BUILDING",
   },
   {
     title: "Open Source Systems",
-    description: "Open protocols, open models, open data, open governance, forkable infrastructure, community-owned technology commons.",
+    description: "Open protocols, open models, open data, open governance.",
     href: "/technology/open-source",
     status: "BUILDING",
   },
@@ -134,7 +134,7 @@ export default function TechnologyPage() {
                 Technology Areas
               </h2>
               <p className="body-lg text-muted-foreground text-center mb-12">
-                Nine areas. Each a deep technical trajectory. Status explicitly marked.
+                Nine technology areas.
               </p>
               <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                 {techAreas.map((area) => (
@@ -159,9 +159,9 @@ export default function TechnologyPage() {
                 <h2 id="openmontage-heading" className="heading-lg font-light text-foreground mb-4">
                   OpenMontage — AI-Assisted Creative Systems
                 </h2>
-                <p className="body-lg text-muted-foreground mb-6">
-                  Deep work on AI-assisted video creation. Open models. Local inference. Cinematic pipelines. Creative automation.
-                </p>
+              <p className="body-lg text-muted-foreground mb-6">
+                AI-assisted video creation. Open models. Local inference. Cinematic pipelines.
+              </p>
                 <Link href="/technology/openmontage" className="btn-outline inline-flex items-center gap-2">
                   Explore OpenMontage
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -181,7 +181,7 @@ export default function TechnologyPage() {
                 Technology in the Work
               </h2>
               <p className="body-lg text-muted-foreground text-center mb-12">
-                Technology areas power the projects. Not separate — integrated.
+                Technology powering the projects.
               </p>
               <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                 {[

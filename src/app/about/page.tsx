@@ -5,7 +5,7 @@ import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "About",
-  description: "Shanmugam Vijay Balakrishnan — Creator, Founder, Systems Builder, Civilization Architect. Building community economies, intelligent technologies and civilizational systems for a flourishing future.",
+  description: "Shanmugam Vijay Balakrishnan — Creator, Founder, Systems Builder. Building community economies, intelligent technologies, and civilizational systems.",
   openGraph: {
     title: "About — Shanmugam Vijay Balakrishnan",
     description: "Creator • Founder • Systems Builder • Civilization Architect",
@@ -44,17 +44,17 @@ export default function AboutPage() {
                   "Building community economies, intelligent technologies and civilizational systems for a flourishing future."
                 </p>
                 <p className="body-lg text-muted-foreground">
-                  This is not a mission statement written for a pitch deck. It is the through-line connecting every project, every organization, every line of code, every community conversation, and every late-night design session.
+                  The through-line connecting every project, system, and community.
                 </p>
               </div>
 
               {/* Identity & Roles */}
               <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4 mb-16">
                 {[
-                  { title: "CREATOR", description: "Ideas → Systems → Reality. From first principles to working prototypes." },
-                  { title: "FOUNDER", description: "Boysenberry, UGT, Zentium, Kingdom of Shiva, Creator Community. Distinct entities, shared vision." },
-                  { title: "SYSTEMS BUILDER", description: "Architecture that scales. Community economies. Intelligent platforms. Civilizational frameworks." },
-                  { title: "CIVILIZATION ARCHITECT", description: "Heaven on Earth. Kingdom of Shiva. Integrated Intelligence. Long-horizon civilizational design." },
+                  { title: "CREATOR", description: "Ideas → Systems → Reality." },
+                  { title: "FOUNDER", description: "Boysenberry, UGT, Zentium, Kingdom of Shiva, Creator Community." },
+                  { title: "SYSTEMS BUILDER", description: "Architecture that scales. Community economies. Intelligent platforms." },
+                  { title: "CIVILIZATION ARCHITECT", description: "Heaven on Earth. Kingdom of Shiva. Integrated Intelligence." },
                 ].map((role) => (
                   <div key={role.title} className="card-base text-center">
                     <h3 className="caption text-primary font-medium mb-3">{role.title}</h3>
@@ -111,7 +111,7 @@ export default function AboutPage() {
                 Entity Relationships
               </h2>
               <p className="body-lg text-muted-foreground text-center mb-12">
-                Clear separation between legal/organizational identities. The personal website explains relationships but does not merge them.
+                Clear separation between legal identities. The website explains relationships without merging them.
               </p>
 
               <div className="space-y-6">
@@ -120,7 +120,7 @@ export default function AboutPage() {
                     entity: "Boysenberry Marketing Private Limited",
                     role: "Founder",
                     type: "Private Limited Company (India)",
-                    description: "Community-centered economic model combining local participation with modern business and technology.",
+                    description: "Community-centered economic model.",
                     status: "BUILDING",
                     href: "/boysenberry",
                   },
@@ -128,7 +128,7 @@ export default function AboutPage() {
                     entity: "Universal Guard Trust",
                     role: "Founder",
                     type: "Global Trust / Framework",
-                    description: "Open architecture for continuous civilizational learning and creation. Canonical source: ugtglobal.space",
+                    description: "Open architecture for civilizational learning.",
                     status: "OPERATING",
                     href: "/universal-guard-trust",
                   },
@@ -136,7 +136,7 @@ export default function AboutPage() {
                     entity: "UGT India",
                     role: "Founder",
                     type: "Indian Entity under UGT",
-                    description: "Local implementation arm of the Universal Guard Trust framework.",
+                    description: "Local implementation of UGT framework.",
                     status: "BUILDING",
                     href: "/universal-guard-trust",
                   },
@@ -144,7 +144,7 @@ export default function AboutPage() {
                     entity: "Creator Community",
                     role: "Creator / Builder",
                     type: "Open Execution Layer",
-                    description: "369 domains, 271 patterns, 99,999 projects — the execution layer for civilizational creation.",
+                    description: "Execution layer for civilizational creation.",
                     status: "BUILDING",
                     href: "/creator-community",
                   },
@@ -152,7 +152,7 @@ export default function AboutPage() {
                     entity: "Kingdom of Shiva",
                     role: "Creator",
                     type: "Knowledge Civilization Initiative",
-                    description: "Virtual civilization of Hindu knowledge, heritage, philosophy and living traditions.",
+                    description: "Virtual civilization of Hindu knowledge and living traditions.",
                     status: "BUILDING",
                     href: "/kingdom-of-shiva",
                   },
@@ -160,7 +160,7 @@ export default function AboutPage() {
                     entity: "Zentium",
                     role: "Creator",
                     type: "Decentralized Blockchain Project",
-                    description: "Decentralized project infrastructure, community-oriented digital value, future decentralized systems.",
+                    description: "Decentralized project infrastructure and community value.",
                     status: "BUILDING",
                     href: "/zentium",
                   },
@@ -168,7 +168,7 @@ export default function AboutPage() {
                     entity: "Technology / Creative Systems",
                     role: "Builder",
                     type: "Personal R&D / Open Source",
-                    description: "AI, VR, Web, Metaverse, Creative Technology, Automation, Video Generation, OpenMontage.",
+                    description: "AI, VR, Web, Metaverse, Creative Technology.",
                     status: "BUILDING",
                     href: "/technology",
                   },
@@ -208,11 +208,11 @@ export default function AboutPage() {
               <h2 id="not-heading" className="heading-lg font-light text-foreground mb-6">
                 What This Is Not
               </h2>
-              <div className="space-y-4 text-left text-sm text-muted-foreground">
+              <div className="space-y-3 text-left text-sm text-muted-foreground">
                 <p>❌ A conventional résumé or corporate founder page</p>
                 <p>❌ A motivational-influencer personal brand</p>
                 <p>❌ A single merged organization claiming all projects</p>
-                <p>❌ Financial promises, passive income guarantees, or investment advice</p>
+                <p>❌ Financial promises or investment advice</p>
                 <p>❌ Completed solutions to civilization-scale problems</p>
                 <p>❌ Static portfolio — this is a living map of ongoing work</p>
               </div>

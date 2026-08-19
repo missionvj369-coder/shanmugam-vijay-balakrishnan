@@ -5,24 +5,24 @@ import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Creator Community",
-  description: "The execution layer for civilizational creation. 369 domains, 271 patterns, 99,999 projects. PROJECT → BUILD → AI GUIDE → HUMAN DECISION → TEAM → GITHUB → PROTOTYPE → TEST → EVIDENCE → FORK → REPLICATE.",
+  description: "Execution layer for civilizational creation. 369 domains, 271 patterns, 99,999 projects.",
   openGraph: {
     title: "Creator Community — Execution Layer",
-    description: "Building the machinery that produces systems at scale.",
+    description: "Machinery that produces systems at scale.",
     type: "website",
   },
 };
 
 const architecture = [
-  { label: "369 DOMAINS", description: "Complete taxonomy of human endeavor — every domain where civilization creates." },
-  { label: "271 PATTERNS", description: "Reusable system patterns. Proven architectures. Forkable. Composable." },
-  { label: "99,999 PROJECTS", description: "Project catalogue. Not all active. A universe of possibility. Each forkable." },
+  { label: "369 DOMAINS", description: "Complete taxonomy of human endeavor." },
+  { label: "271 PATTERNS", description: "Reusable system patterns. Forkable. Composable." },
+  { label: "99,999 PROJECTS", description: "Project catalogue. A universe of possibility. Each forkable." },
 ];
 
 const buildPipeline = [
-  { step: "PROJECT", description: "Select or propose a project from the 99,999 catalogue. Or create new." },
-  { step: "BUILD", description: "Initiate build. Resources allocated. Team formation begins." },
-  { step: "AI GUIDE", description: "AI assists with architecture, code, design, research, documentation." },
+  { step: "PROJECT", description: "Select or propose a project from the catalogue." },
+  { step: "BUILD", description: "Initiate build. Resources allocated. Team forms." },
+  { step: "AI GUIDE", description: "AI assists with architecture, code, design, research." },
   { step: "HUMAN DECISION", description: "Human reviews, approves, redirects. AI proposes. Human decides." },
   { step: "TEAM", description: "Contributors join. Roles defined. Coordination protocols activated." },
   { step: "GITHUB", description: "Code, docs, assets in version control. Open. Forkable. Transparent." },
@@ -59,7 +59,7 @@ export default function CreatorCommunityPage() {
                 CREATOR COMMUNITY
               </h1>
               <p className="body-lg text-muted-foreground max-w-2xl mx-auto">
-                The machinery that produces systems at scale. 369 domains. 271 patterns. 99,999 projects.
+                The execution layer for civilizational creation. 369 domains. 271 patterns. 99,999 projects.
               </p>
               <div className="flex flex-wrap items-center justify-center gap-2 mt-6">
                 <span className="status-badge status-building">BUILDING</span>
@@ -77,7 +77,7 @@ export default function CreatorCommunityPage() {
                 Core Architecture
               </h2>
               <p className="body-lg text-muted-foreground text-center mb-12">
-                Three numbers. One system. The execution layer for civilizational creation.
+                Three numbers. One system.
               </p>
               <div className="grid gap-6 md:grid-cols-3">
                 {architecture.map((item) => (
@@ -152,7 +152,7 @@ export default function CreatorCommunityPage() {
                   Creator Community is the <strong className="text-foreground">execution layer</strong> for the Universal Guard Trust framework.
                 </p>
                 <p>
-                  UGT provides the architecture (principles, learning loop, flourishing metrics, domain taxonomy). Creator Community provides the <strong className="text-foreground">machinery</strong> — the AI-guided build pipeline, the project catalogue, the fork-and-replicate mechanism — that turns architecture into deployed systems.
+                   UGT provides the architecture. Creator Community provides the <strong className="text-foreground">machinery</strong> — the AI-guided pipeline, project catalogue, fork-and-replicate mechanism.
                 </p>
                 <p>
                   <strong className="text-foreground">UGT = Operating System.</strong> Creator Community = Application Factory.
@@ -175,7 +175,7 @@ export default function CreatorCommunityPage() {
               <div className="space-y-4 text-sm text-muted-foreground">
                 <div className="card-base p-4">
                   <h3 className="font-medium text-foreground mb-2">Project Catalogue Status</h3>
-                  <p>The 99,999-project universe is a <strong className="text-foreground">catalogue of possibility</strong> — not all projects are actively operating. Many are designed, some are building, few are deployed. The number represents the addressable space, not current active count.</p>
+                  <p>The 99,999-project universe is a <strong className="text-foreground">catalogue of possibility</strong> — not all projects are active. The number represents addressable space.</p>
                 </div>
                 <div className="card-base p-4">
                   <h3 className="font-medium text-foreground mb-2">Entity Separation</h3>

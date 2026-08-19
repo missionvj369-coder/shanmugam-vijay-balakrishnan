@@ -7,7 +7,7 @@ const journeyStages = [
   {
     phase: "EARLY CREATION",
     period: "Foundational Years",
-    description: "First experiments in code, design, and systems thinking. Learning the craft. Building small tools. Understanding how software shapes behavior. The creator identity forms.",
+    description: "First experiments in code, design, and systems thinking. Learning the craft. Building small tools. The creator identity forms.",
     highlights: [
       "First programming experiences",
       "Early web projects and experiments",
@@ -19,7 +19,7 @@ const journeyStages = [
   {
     phase: "TECHNOLOGY / EXPERIMENTATION",
     period: "Deep Technical Exploration",
-    description: "Pushing boundaries across multiple technology domains. AI, blockchain, VR, web technologies, automation. Not specialization — deliberate breadth to understand the full technology stack.",
+    description: "Pushing boundaries across AI, blockchain, VR, web, automation. Deliberate breadth across the full technology stack.",
     highlights: [
       "AI/ML model experimentation",
       "Blockchain and smart contract development",
@@ -32,7 +32,7 @@ const journeyStages = [
   {
     phase: "COMMUNITY / BUSINESS",
     period: "Applied Systems in Reality",
-    description: "Moving from pure technology to human systems. Understanding how communities organize, how economies function, how incentives shape behavior. The bridge between code and civilization.",
+    description: "Moving from technology to human systems. Understanding communities, economies, incentives. The bridge between code and civilization.",
     highlights: [
       "Community building experiments",
       "Economic model prototyping",
@@ -44,7 +44,7 @@ const journeyStages = [
   {
     phase: "BOYSENBERRY",
     period: "Community Economy in Action",
-    description: "Founding Boysenberry Marketing Private Limited. Translating community-first economic theory into operating reality. Community stores, local production, referral participation, profit circulation. Building the model pincode by pincode.",
+    description: "Founding Boysenberry. Translating community-first economic theory into reality. Community stores, local production, referral participation, profit circulation.",
     highlights: [
       "Company incorporation",
       "Community store pilot launches",
@@ -60,7 +60,7 @@ const journeyStages = [
   {
     phase: "ZENTIUM",
     period: "Decentralized Infrastructure",
-    description: "Creating Zentium as a decentralized blockchain project. Community-oriented digital value. Blockchain infrastructure for community economies. VR, web, metaverse integration vision. Separate from UGT — its own technical trajectory.",
+    description: "Creating Zentium as a decentralized blockchain project. Community-oriented digital value. Blockchain infrastructure for community economies.",
     highlights: [
       "Zentium coin creation",
       "Blockchain protocol development",
@@ -75,7 +75,7 @@ const journeyStages = [
   {
     phase: "UNIVERSAL GUARD TRUST",
     period: "Global Civilizational Framework",
-    description: "Establishing UGT as an open architecture for civilizational learning and creation. The core chain: Human Evolution → Integrated Intelligence → Human Flourishing → Civilization Transformation → Conscious Civilization → Heaven on Earth. Canonical source: ugtglobal.space",
+    description: "Establishing UGT as an open architecture for civilizational learning. Core chain: Human Evolution → Integrated Intelligence → Flourishing → Heaven on Earth.",
     highlights: [
       "UGT framework architecture",
       "Integrated Intelligence research",
@@ -90,7 +90,7 @@ const journeyStages = [
   {
     phase: "INTEGRATED INTELLIGENCE",
     period: "Cognitive Architecture Research",
-    description: "Deepening the intelligence layer of UGT. Human wisdom + machine capability + collective knowledge + ecological awareness as one integrated system. Not AI vs human — integrated intelligence.",
+    description: "Deepening UGT's intelligence layer. Human wisdom + machine capability + collective knowledge + ecological awareness as one system. Integrated intelligence.",
     highlights: [
       "Human-AI collaboration frameworks",
       "Collective intelligence protocols",
@@ -104,7 +104,7 @@ const journeyStages = [
   {
     phase: "HEAVEN ON EARTH",
     period: "Civilizational Architecture",
-    description: "Developing the Heaven on Earth blueprint through UGT. An evolving working architecture for conscious civilization. Domains: human life, consciousness, intelligence, relationships, education, health, economy, technology, ecology, community, civilization, measurement, projects, evidence, continuous learning.",
+    description: "Developing the Heaven on Earth blueprint through UGT. An evolving architecture for conscious civilization across 14 domains.",
     highlights: [
       "Blueprint architecture design",
       "14-domain civilizational model",
@@ -119,7 +119,7 @@ const journeyStages = [
   {
     phase: "CREATOR COMMUNITY",
     period: "Execution Layer at Scale",
-    description: "Building the Creator Community as the execution layer for civilizational creation. 369 domains, 271 patterns, 99,999 projects. PROJECT → BUILD → AI GUIDE → HUMAN DECISION → TEAM → GITHUB → PROTOTYPE → TEST → EVIDENCE → FORK → REPLICATE.",
+    description: "Building the Creator Community as the execution layer. 369 domains, 271 patterns, 99,999 projects. PROJECT → BUILD → TEST → FORK → REPLICATE.",
     highlights: [
       "369 domain taxonomy",
       "271 reusable patterns",
@@ -134,7 +134,7 @@ const journeyStages = [
   {
     phase: "KINGDOM OF SHIVA",
     period: "Hindu Knowledge Civilization",
-    description: "Launching Kingdom of Shiva as a separate civilizational knowledge initiative. Virtual civilization of Hindu knowledge, heritage, philosophy, and living traditions. Texts, philosophy, temples, sacred geography, history, archaeology, science, mathematics, medicine, yoga, languages, arts, music, festivals, living traditions, global communities. Evidence-aware exploration.",
+    description: "Launching Kingdom of Shiva as a civilizational knowledge initiative. Virtual civilization of Hindu knowledge, heritage, philosophy, and living traditions. Evidence-aware exploration.",
     highlights: [
       "Knowledge civilization architecture",
       "Multi-domain coverage design",
@@ -149,7 +149,7 @@ const journeyStages = [
   {
     phase: "AI CREATION SYSTEMS",
     period: "Creative Technology Frontier",
-    description: "Advancing OpenMontage and creative AI systems. Local-first video generation, voice synthesis, music creation, cinematic pipelines, automation. Open models, local AI, creative automation. Technology as instrument for human creativity.",
+    description: "Advancing OpenMontage and creative AI systems. Local-first video generation, voice synthesis, music creation, cinematic pipelines. Open models, local AI.",
     highlights: [
       "OpenMontage development",
       "Local AI video generation",
@@ -164,7 +164,7 @@ const journeyStages = [
   {
     phase: "FUTURE",
     period: "Ongoing Evolution",
-    description: "The work continues. Each system feeds the others. The work map is a living document. New nodes emerge. Connections deepen. The loop repeats: SEE THE WHOLE → QUESTION → CONNECT KNOWLEDGE → CREATE → TEST → MEASURE → LEARN → SHARE → IMPROVE.",
+    description: "The work continues. Each system feeds the others. The loop repeats: SEE THE WHOLE → QUESTION → CREATE → TEST → LEARN → IMPROVE.",
     highlights: [
       "Cross-system integration",
       "New domain exploration",
@@ -178,7 +178,7 @@ const journeyStages = [
 
 export const metadata: Metadata = {
   title: "Journey",
-  description: "The evolution of the work — from early creation through technology experimentation, community business, Boysenberry, Zentium, Universal Guard Trust, Integrated Intelligence, Heaven on Earth, Creator Community, Kingdom of Shiva, AI creation systems, to the future.",
+  description: "The evolution of the work — from early creation through technology, community, civilization, and beyond.",
   openGraph: {
     title: "Journey — Shanmugam Vijay Balakrishnan",
     description: "Tracing the evolution of a creator's work across community, intelligence, civilization, technology, and decentralization.",
@@ -201,7 +201,7 @@ export default function JourneyPage() {
                 The Evolution of the Work
               </h1>
               <p className="body-lg text-muted-foreground max-w-2xl mx-auto">
-                Not a linear career path. A spiral of deepening understanding. Each phase builds on the last. The work map is the current snapshot of a moving process.
+                A spiral of deepening understanding. Each phase builds on the last.
               </p>
             </div>
           </div>
@@ -278,32 +278,32 @@ export default function JourneyPage() {
               <h2 id="transitions-heading" className="heading-lg font-light text-foreground text-center mb-12">
                 Key Transitions
               </h2>
-              <p className="body-lg text-muted-foreground text-center mb-12">
-                The journey is defined by inflection points — moments where the work fundamentally shifted direction or depth.
-              </p>
+                  <p className="body-lg text-muted-foreground text-center mb-12">
+                    Inflection points where the work fundamentally shifted direction.
+                  </p>
               <div className="grid gap-6 md:grid-cols-2">
                 {[
                   {
                     title: "Technology → Human Systems",
-                    description: "Realizing that code alone cannot solve civilization-scale problems. The pivot from pure technical experimentation to community economics, incentive design, and human coordination systems.",
+                    description: "Realizing code alone cannot solve civilization-scale problems. Pivot from technical experimentation to community economics and human coordination.",
                     from: "TECHNOLOGY / EXPERIMENTATION",
                     to: "COMMUNITY / BUSINESS",
                   },
                   {
                     title: "Single Project → Ecosystem",
-                    description: "Boysenberry proved the community economy model. UGT provided the civilizational framework. Zentium added decentralized infrastructure. The insight: these are not separate projects — they are nodes in one coherent system.",
+                    description: "Boysenberry proved the community economy model. UGT provided the framework. Zentium added decentralized infrastructure. These are nodes in one coherent system.",
                     from: "BOYSENBERRY / ZENTIUM / UGT",
                     to: "INTEGRATED ECOSYSTEM",
                   },
                   {
                     title: "Framework → Execution",
-                    description: "UGT and Heaven on Earth are architectures. Creator Community is the execution layer. The shift from designing systems to building the machinery that produces systems at scale — 99,999 projects.",
+                    description: "UGT and Heaven on Earth are architectures. Creator Community is the execution layer. From designing systems to building machinery that produces systems at scale.",
                     from: "UNIVERSAL GUARD TRUST / HEAVEN ON EARTH",
                     to: "CREATOR COMMUNITY",
                   },
                   {
                     title: "Universal → Particular",
-                    description: "Kingdom of Shiva applies the civilizational framework to a specific knowledge tradition. Not abstract civilization — Hindu civilization. Evidence-aware. Living tradition. The universal principles tested in a particular domain.",
+                    description: "Kingdom of Shiva applies the civilizational framework to Hindu civilization. Evidence-aware. Living tradition. Universal principles tested in a particular domain.",
                     from: "HEAVEN ON EARTH / UGT",
                     to: "KINGDOM OF SHIVA",
                   },
@@ -334,18 +334,18 @@ export default function JourneyPage() {
               </h2>
               <div className="prose-content text-muted-foreground space-y-4 text-left max-w-2xl mx-auto">
                 <p>
-                  The work currently operates across all phases simultaneously. This is not sequential — it is parallel:
+                  The work operates across all phases simultaneously. This is parallel, not sequential:
                 </p>
                 <ul className="space-y-2 list-disc list-inside">
-                  <li><strong className="text-foreground">Boysenberry</strong> — Scaling community stores, refining the economic model, building the AI-assisted platform</li>
-                  <li><strong className="text-foreground">Universal Guard Trust</strong> — Deepening the Integrated Intelligence research, evolving the Heaven on Earth blueprint</li>
-                  <li><strong className="text-foreground">Creator Community</strong> — Expanding the 369 domains, improving the AI-guided build pipeline, growing the project catalogue</li>
-                  <li><strong className="text-foreground">Kingdom of Shiva</strong> — Building the knowledge civilization platform, documenting living traditions, connecting global communities</li>
-                  <li><strong className="text-foreground">Zentium</strong> — Advancing the blockchain protocol, exploring community money mechanics, researching VR/metaverse integration</li>
-                  <li><strong className="text-foreground">Technology / Creative AI</strong> — OpenMontage local video generation, creative automation pipelines, open model optimization</li>
+                  <li><strong className="text-foreground">Boysenberry</strong> — Scaling community stores, refining the economic model</li>
+                  <li><strong className="text-foreground">Universal Guard Trust</strong> — Deepening Integrated Intelligence research, evolving Heaven on Earth</li>
+                  <li><strong className="text-foreground">Creator Community</strong> — Expanding domains, improving the AI-guided build pipeline</li>
+                  <li><strong className="text-foreground">Kingdom of Shiva</strong> — Building the knowledge platform, documenting living traditions</li>
+                  <li><strong className="text-foreground">Zentium</strong> — Advancing the blockchain protocol, exploring community money</li>
+                  <li><strong className="text-foreground">Technology / Creative AI</strong> — OpenMontage, creative automation, open models</li>
                 </ul>
                 <p className="mt-4">
-                  The work map shows the current state. The journey shows how we got here. The future is the next iteration of the loop.
+                  The work map shows current state. The journey shows how we got here. The future is the next iteration.
                 </p>
               </div>
             </div>

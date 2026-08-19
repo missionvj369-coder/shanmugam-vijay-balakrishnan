@@ -63,7 +63,7 @@ export default function PrivacyPage() {
                 PRIVACY POLICY
               </h1>
               <p className="body-lg text-muted-foreground max-w-2xl mx-auto">
-                How this website handles data, cookies, and user information.
+                Data handling and privacy practices.
               </p>
               <p className="text-sm text-muted-foreground mt-4">Effective Date: {new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}</p>
             </div>

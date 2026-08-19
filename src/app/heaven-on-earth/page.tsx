@@ -5,7 +5,7 @@ import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Heaven on Earth",
-  description: "Civilizational architecture being developed through Universal Guard Trust. An evolving working architecture for conscious civilization. Domains: human life, consciousness, intelligence, relationships, education, health, economy, technology, ecology, community, civilization, measurement, projects, evidence, continuous learning.",
+  description: "Civilizational architecture for conscious civilization. Evolving. Evidence-based. Measurable.",
   openGraph: {
     title: "Heaven on Earth — Civilizational Architecture",
     description: "The working architecture for conscious civilization. Evolving. Evidence-based. Measurable.",
@@ -69,7 +69,7 @@ export default function HeavenOnEarthPage() {
                 HEAVEN ON EARTH
               </h1>
               <p className="body-lg text-muted-foreground max-w-2xl mx-auto">
-                The working architecture for conscious civilization. Developed through Universal Guard Trust. Evolving. Evidence-based. Measurable.
+                Civilizational architecture for conscious civilization. Evolving, evidence-based, measurable.
               </p>
               <div className="flex flex-wrap items-center justify-center gap-2 mt-6">
                 <span className="status-badge status-building">BUILDING</span>
@@ -86,15 +86,12 @@ export default function HeavenOnEarthPage() {
               <h2 id="what-heading" className="heading-lg font-light text-foreground text-center mb-12">
                 What This Is
               </h2>
-              <div className="prose-content text-muted-foreground space-y-6 text-center max-w-2xl mx-auto">
+              <div className="prose-content text-muted-foreground space-y-4 text-center max-w-2xl mx-auto">
                 <p>
                   Heaven on Earth is not a destination. It is a <strong className="text-foreground">working architecture</strong> — a living system design for conscious civilization.
                 </p>
                 <p>
-                  Developed through the Universal Guard Trust framework. It applies the UGT core chain (Human Evolution → Integrated Intelligence → Human Flourishing → Civilization Transformation → Conscious Civilization → Heaven on Earth) as a practical, measurable, improvable system.
-                </p>
-                <p>
-                  <strong className="text-foreground">It is an evolving blueprint.</strong> Not a completed solution. The learning loop (Understand → Connect → Create → Test → Measure → Learn → Share → Adapt → Create Again) runs continuously. Each cycle deepens the architecture.
+                  <strong className="text-foreground">An evolving blueprint.</strong> Not a completed solution. The learning loop runs continuously.
                 </p>
               </div>
             </div>
@@ -109,7 +106,7 @@ export default function HeavenOnEarthPage() {
                 The 15 Domains
               </h2>
               <p className="body-lg text-muted-foreground text-center mb-12">
-                Civilization is not one thing. It is the metabolism across these interconnected domains.
+                15 interconnected domains of civilization.
               </p>
               <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
                 {domains.map((domain) => (
@@ -119,7 +116,7 @@ export default function HeavenOnEarthPage() {
                 ))}
               </div>
               <p className="text-center text-sm text-muted-foreground mt-8">
-                Each domain has: current state assessment, flourishing metrics, active projects, evidence base, and learning loop integration.
+                Each domain has: current state, flourishing metrics, active projects.
               </p>
             </div>
           </div>
@@ -133,7 +130,7 @@ export default function HeavenOnEarthPage() {
                 The Continuous Learning Loop
               </h2>
               <p className="body-lg text-muted-foreground text-center mb-12">
-                This is the UGT architecture applied to civilizational design. Fixed systems die. Learning systems evolve.
+                This is the UGT architecture applied to civilizational design.
               </p>
               <div className="grid gap-4 md:grid-cols-3 lg:grid-cols-9">
                 {learningLoop.map((item, i) => (

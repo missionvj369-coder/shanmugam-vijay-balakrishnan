@@ -28,7 +28,7 @@ const termsSections = [
   },
   {
     title: "Entity Separation",
-    content: "This website describes multiple distinct entities and projects. Each operates with its own legal identity. The website explains relationships between them but does not merge or claim they are the same organization.",
+    content: "This website describes multiple distinct entities and projects. Each has its own legal identity.",
   },
   {
     title: "Status Transparency",

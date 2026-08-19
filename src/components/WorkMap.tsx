@@ -10,6 +10,7 @@ interface WorkNode {
   category: string;
   description: string;
   status: "operating" | "building" | "pilot" | "research" | "planned" | "vision";
+  external?: boolean;
   x?: number;
   y?: number;
   vx?: number;
@@ -37,7 +38,7 @@ const categories: WorkCategory[] = [
         href: "/boysenberry",
         category: "Community Economy",
         description: "Community-centered economic model combining local participation with modern business and technology",
-        status: "building",
+        status: "operating",
       },
       {
         id: "creator-community",
@@ -115,6 +116,33 @@ const categories: WorkCategory[] = [
         category: "Blockchain & Decentralization",
         description: "Decentralized project infrastructure, community-oriented digital value, future decentralized systems",
         status: "building",
+      },
+      {
+        id: "zentium-coin",
+        label: "Zentium Coin",
+        href: "https://ugtglobal.space",
+        category: "Community Currency",
+        description: "Native community currency for value circulation within the ecosystem",
+        status: "operating",
+        external: true,
+      },
+      {
+        id: "ugt-global",
+        label: "UGT Global",
+        href: "https://ugtglobal.space",
+        category: "Global Framework",
+        description: "Universal Guard Trust global initiative",
+        status: "operating",
+        external: true,
+      },
+      {
+        id: "ugt-india",
+        label: "UGT India",
+        href: "https://ugtindia.space",
+        category: "National Framework",
+        description: "Universal Guard Trust India initiative",
+        status: "operating",
+        external: true,
       },
       {
         id: "blockchain",
@@ -407,7 +435,7 @@ export function WorkMap({
         >
           <div className="w-20 h-20 rounded-full border-2 bg-background flex items-center justify-center text-center relative group/cat" style={{ borderColor: cat.color + "80" }}>
             <div className="absolute inset-0 rounded-full opacity-0 group-hover/cat:opacity-100 transition-opacity" style={{ backgroundColor: cat.color }} />
-            <div className="relative z-10 text-white">
+            <div className="relative z-10 text-foreground group-hover/cat:text-white transition-colors">
               <p className="text-xs font-medium uppercase tracking-wider">{cat.label}</p>
             </div>
           </div>
@@ -486,8 +514,8 @@ export function WorkMap({
         ))
       )}
 
-      {/* Legend */}
-      <div className="absolute bottom-4 left-4 right-4 md:left-auto md:bottom-4 md:right-4 md:w-56 card-base z-20">
+      {/* Legend - positioned top-right to avoid node overlap */}
+      <div className="absolute top-4 right-4 z-20 card-base w-48">
         <p className="caption text-foreground mb-3">Work Status</p>
         <div className="space-y-2">
           {[

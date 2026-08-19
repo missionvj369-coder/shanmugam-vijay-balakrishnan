@@ -5,7 +5,7 @@ import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Automation",
-  description: "Workflow automation, agent orchestration, CI/CD for creative pipelines, infrastructure as code, self-healing systems.",
+  description: "Workflow automation, agent orchestration, infrastructure as code.",
   openGraph: {
     title: "Automation — Technology",
     description: "Workflow automation and intelligent systems.",
@@ -14,12 +14,12 @@ export const metadata: Metadata = {
 };
 
 const automationAreas = [
-  { title: "Workflow Automation", description: "Automating repetitive workflows. Human oversight at decision points. AI handles execution." },
-  { title: "Agent Orchestration", description: "Coordinating multiple AI agents. Task decomposition, delegation, verification, human approval." },
-  { title: "CI/CD for Creative Pipelines", description: "Continuous integration and deployment for creative assets. Version control, automated testing, pipeline orchestration." },
-  { title: "Infrastructure as Code", description: "Infrastructure defined in code. Reproducible. Versioned. Auditable. No manual configuration drift." },
-  { title: "Self-Healing Systems", description: "Systems that detect failures and recover automatically. Monitoring, alerting, auto-remediation." },
-  { title: "Pipeline Orchestration", description: "End-to-end workflow orchestration. Batch processing, asset management, dependency resolution." },
+  { title: "Workflow Automation", description: "Automating repetitive workflows. Human oversight at decision points." },
+  { title: "Agent Orchestration", description: "Coordinating multiple AI agents. Task decomposition, delegation, human approval." },
+  { title: "CI/CD for Creative Pipelines", description: "Continuous integration and deployment for creative assets. Version control, pipeline orchestration." },
+  { title: "Infrastructure as Code", description: "Infrastructure defined in code. Reproducible. Versioned. Auditable." },
+  { title: "Self-Healing Systems", description: "Systems that detect failures and recover automatically. Monitoring, alerting." },
+  { title: "Pipeline Orchestration", description: "End-to-end workflow orchestration. Batch processing, asset management." },
 ];
 
 const principles = [
@@ -45,7 +45,7 @@ export default function AutomationPage() {
                 AUTOMATION
               </h1>
               <p className="body-lg text-muted-foreground max-w-2xl mx-auto">
-                Workflow automation and intelligent systems. Human oversight at every decision point.
+                Workflow automation and intelligent systems.
               </p>
               <div className="flex flex-wrap items-center justify-center gap-2 mt-6">
                 <span className="status-badge status-building">BUILDING</span>
@@ -63,7 +63,7 @@ export default function AutomationPage() {
                 Automation Areas
               </h2>
               <p className="body-lg text-muted-foreground text-center mb-12">
-                Six interconnected technical domains. Each feeds the broader automation strategy.
+                Six interconnected technical domains.
               </p>
               <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                 {automationAreas.map((area) => (
@@ -105,9 +105,9 @@ export default function AutomationPage() {
               </h2>
               <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                 {[
-                  { title: "Creator Community", description: "AI-guided build pipeline.", href: "/creator-community", status: "BUILDING" },
-                  { title: "OpenMontage", description: "Creative automation pipelines.", href: "/technology/openmontage", status: "BUILDING" },
-                  { title: "Boysenberry", description: "AI-assisted ecommerce platform.", href: "/boysenberry", status: "BUILDING" },
+                  { title: "Creator Community", description: "AI-guided build pipeline", href: "/creator-community", status: "BUILDING" },
+                  { title: "OpenMontage", description: "Creative automation.", href: "/technology/openmontage", status: "BUILDING" },
+                  { title: "Boysenberry", description: "AI-assisted ecommerce.", href: "/boysenberry", status: "BUILDING" },
                   { title: "Technology", description: "Technology overview.", href: "/technology", status: "BUILDING" },
                 ].map((project) => (
                   <Link key={project.title} href={project.href} className="card-interactive group">

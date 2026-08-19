@@ -6,73 +6,73 @@ import { Footer } from "@/components/Footer";
 const principles = [
   {
     title: "GOING BACK TO OUR ROOTS",
-    description: "Modern systems have disconnected us from local knowledge, community wisdom, and ancestral practices. The path forward requires recovering what was lost — not as nostalgia, but as foundation. Local production, community stores, indigenous knowledge, and traditional wisdom are not obstacles to progress; they are the substrate on which resilient futures are built.",
+    description: "Recovering local knowledge and community wisdom as foundation. Local production, community stores, traditional wisdom.",
     projects: ["/boysenberry", "/kingdom-of-shiva", "/universal-guard-trust"],
     projectLabels: ["Boysenberry", "Kingdom of Shiva", "Universal Guard Trust"],
   },
   {
     title: "COMMUNITY BEFORE EXTRACTION",
-    description: "Conventional business extracts value from communities. The alternative is systems where community participation creates value that circulates locally. Referral incentives, community purchasing, local employment, and profit allocation to community development — these are not add-ons. They are the architecture.",
+    description: "Community participation creates locally circulating value. Referral incentives, community purchasing, local employment, profit allocation.",
     projects: ["/boysenberry", "/creator-community"],
     projectLabels: ["Boysenberry", "Creator Community"],
   },
   {
     title: "TECHNOLOGY IN SERVICE OF HUMANITY",
-    description: "Technology is not the destination. Technology is infrastructure for human possibility. Every AI model, every blockchain, every VR environment, every automation pipeline must be evaluated against one question: does this expand human capability, agency, and flourishing? If not, it is noise.",
+    description: "Technology is infrastructure for human possibility. Every system must expand human capability, agency, and flourishing.",
     projects: ["/technology", "/technology/ai", "/technology/creative-ai", "/zentium"],
     projectLabels: ["Technology", "AI Systems", "Creative AI", "Zentium"],
   },
   {
     title: "INTEGRATED INTELLIGENCE",
-    description: "Human evolution → Integrated intelligence → Human flourishing → Civilization transformation → Conscious civilization → Heaven on Earth. This is the UGT chain. Intelligence is not artificial vs. natural. It is integrated — human wisdom, machine capability, collective knowledge, and ecological awareness working as one system.",
+    description: "Human wisdom, machine capability, collective knowledge, ecological awareness — working as one system. The UGT chain.",
     projects: ["/universal-guard-trust", "/heaven-on-earth"],
     projectLabels: ["Universal Guard Trust", "Heaven on Earth"],
   },
   {
     title: "LOCAL ACTION + GLOBAL CONNECTION",
-    description: "Global problems require local solutions that connect. A community store in one pincode. A knowledge node in one tradition. A developer in one city. When these connect through shared protocols, open standards, and common purpose, they become a planetary nervous system. Think globally, act locally — but with digital coordination.",
+    description: "Local solutions that connect through shared protocols. Community stores, knowledge nodes, developers — a planetary nervous system.",
     projects: ["/boysenberry", "/creator-community", "/universal-guard-trust"],
     projectLabels: ["Boysenberry", "Creator Community", "Universal Guard Trust"],
   },
   {
     title: "DECENTRALIZATION",
-    description: "Centralized systems create single points of failure, extraction, and control. Decentralization — in governance, in value, in knowledge, in infrastructure — is not ideological. It is structural resilience. Zentium, blockchain systems, and distributed community economies are experiments in this direction.",
+    description: "Centralized systems create single points of failure. Decentralization is structural resilience — in governance, value, knowledge, infrastructure.",
     projects: ["/zentium", "/technology/blockchain", "/boysenberry"],
     projectLabels: ["Zentium", "Blockchain Systems", "Boysenberry"],
   },
   {
     title: "CREATION OVER CONSUMPTION",
-    description: "The consumer economy trains passivity. The creator economy (real, not branded) trains agency. Building, coding, composing, writing, growing, designing, organizing — these are acts of civilization. The Creator Community's 99,999 projects are not a catalogue. They are an invitation to make.",
+    description: "The creator economy trains agency. Building, coding, composing, writing, designing — these are acts of civilization.",
     projects: ["/creator-community", "/media", "/technology/creative-ai"],
     projectLabels: ["Creator Community", "Media", "Creative AI"],
   },
   {
     title: "KNOWLEDGE → CAPABILITY",
-    description: "Knowledge that cannot be applied is decoration. The Kingdom of Shiva, UGT Blueprint, and Creator Community patterns exist to convert knowledge into capability. Texts become practices. Philosophy becomes decision frameworks. Heritage becomes living tradition. Archaeology becomes engineering insight.",
+    description: "Knowledge that cannot be applied is decoration. Texts become practices. Philosophy becomes frameworks. Heritage becomes living tradition.",
     projects: ["/kingdom-of-shiva", "/universal-guard-trust", "/creator-community"],
     projectLabels: ["Kingdom of Shiva", "Universal Guard Trust", "Creator Community"],
   },
   {
     title: "COMMUNITY PROSPERITY",
-    description: "Prosperity is not GDP. It is not token price. It is: food security, health access, education quality, relationship depth, creative expression, spiritual grounding, ecological health, and agency. Boysenberry's community economy model measures what matters. UGT's flourishing metrics track what counts.",
+    description: "Prosperity is not GDP. It is: food security, health access, education, relationships, creative expression, agency. Boysenberry measures what matters.",
     projects: ["/boysenberry", "/universal-guard-trust", "/heaven-on-earth"],
     projectLabels: ["Boysenberry", "Universal Guard Trust", "Heaven on Earth"],
   },
   {
     title: "HUMAN FLOURISHING",
-    description: "The ultimate metric. Not users. Not revenue. Not scale. Flourishing means: autonomy, competence, relatedness, meaning, vitality, and transcendence. Every system — economic, technological, civilizational — must be evaluated against this. If it does not serve flourishing, it serves something else.",
+    description: "The ultimate metric. Not users, revenue, or scale. Flourishing means: autonomy, competence, relatedness, meaning, vitality. Every system must serve this.",
     projects: ["/universal-guard-trust", "/heaven-on-earth", "/boysenberry"],
     projectLabels: ["Universal Guard Trust", "Heaven on Earth", "Boysenberry"],
   },
   {
     title: "CONTINUOUS LEARNING",
-    description: "No blueprint is final. The UGT architecture: Understand → Connect → Create → Test → Measure → Learn → Share → Adapt → Create Again. This is not a methodology. It is the nature of living systems. Fixed systems die. Learning systems evolve. The work map is a snapshot of a moving process.",
+    description: "No blueprint is final. Understand → Connect → Create → Test → Measure → Learn → Adapt. Fixed systems die. Learning systems evolve.",
     projects: ["/universal-guard-trust", "/creator-community", "/how-i-think"],
     projectLabels: ["Universal Guard Trust", "Creator Community", "How I Think"],
   },
   {
     title: "CIVILIZATION AS A LIVING SYSTEM",
-    description: "Civilization is not a monument. It is a metabolism. It takes in energy, information, and matter. It produces culture, technology, institutions, and waste. It learns or it collapses. Heaven on Earth, Kingdom of Shiva, and UGT are attempts to design civilization as a learning, adaptive, self-correcting organism — not a static plan.",
+    description: "Civilization is a metabolism. It learns or it collapses. Heaven on Earth, Kingdom of Shiva, and UGT design civilization as a learning, adaptive organism.",
     projects: ["/heaven-on-earth", "/kingdom-of-shiva", "/universal-guard-trust"],
     projectLabels: ["Heaven on Earth", "Kingdom of Shiva", "Universal Guard Trust"],
   },
@@ -80,7 +80,7 @@ const principles = [
 
 export const metadata: Metadata = {
   title: "Ideas",
-  description: "Core principles behind the work — Going Back to Our Roots, Community Before Extraction, Technology in Service of Humanity, Integrated Intelligence, and more. Each principle links to the projects where it lives.",
+  description: "Core principles behind the work. 12 principles connecting community, intelligence, civilization, technology, and human flourishing.",
   openGraph: {
     title: "Ideas — Shanmugam Vijay Balakrishnan",
     description: "The thinking behind the work. 12 core principles connecting community, intelligence, civilization, technology, and human flourishing.",
@@ -103,7 +103,7 @@ export default function IdeasPage() {
                 The Principles Behind the Work
               </h1>
               <p className="body-lg text-muted-foreground max-w-2xl mx-auto">
-                These are not abstract values. They are design constraints. Each principle shapes specific projects, appears in specific systems, and can be traced through the work map.
+                Design constraints that shape every project and system.
               </p>
             </div>
           </div>
@@ -185,7 +185,7 @@ export default function IdeasPage() {
           <div className="container-custom">
             <div className="max-w-3xl mx-auto text-center">
               <h2 id="explore-heading" className="heading-lg font-light text-foreground mb-6">
-                See Principles in Action
+                Explore the Work
               </h2>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Link href="/work" className="btn-primary">

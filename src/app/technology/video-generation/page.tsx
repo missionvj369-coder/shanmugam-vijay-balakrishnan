@@ -5,7 +5,7 @@ import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Video Generation",
-  description: "Open video models, local inference, cinematic control, long-form generation, consistency, creative direction tools.",
+  description: "Open video models, local inference, cinematic control, long-form generation.",
   openGraph: {
     title: "Video Generation — Technology",
     description: "Open video models and cinematic creation tools.",
@@ -14,12 +14,12 @@ export const metadata: Metadata = {
 };
 
 const videoAreas = [
-  { title: "Open Video Models", description: "Open-weight video generation models. Community-auditable. Locally runnable. No vendor lock-in." },
-  { title: "Local Inference", description: "Video generation on local hardware. Privacy-preserving. Offline-capable. Consumer GPU targets." },
-  { title: "Cinematic Control", description: "Shot composition, lighting direction, color grading, camera movement, narrative structure." },
-  { title: "Long-Form Generation", description: "Extended video generation. Temporal coherence. Character consistency. Scene continuity." },
-  { title: "Consistency", description: "Character, style, and environment consistency across shots. The foundation of cinematic storytelling." },
-  { title: "Creative Direction Tools", description: "Tools for human creative direction. Storyboards, shot lists, style references, iteration controls." },
+  { title: "Open Video Models", description: "Open-weight video generation models. Community-auditable. Locally runnable." },
+  { title: "Local Inference", description: "Video generation on local hardware. Privacy-preserving. Consumer GPU targets." },
+  { title: "Cinematic Control", description: "Shot composition, lighting direction, color grading, camera movement." },
+  { title: "Long-Form Generation", description: "Extended video generation. Temporal coherence. Character consistency." },
+  { title: "Consistency", description: "Character, style, and environment consistency across shots." },
+  { title: "Creative Direction Tools", description: "Tools for human creative direction. Storyboards, shot lists, style references." },
 ];
 
 const principles = [
@@ -45,7 +45,7 @@ export default function VideoGenerationPage() {
                 VIDEO GENERATION
               </h1>
               <p className="body-lg text-muted-foreground max-w-2xl mx-auto">
-                Open video models and cinematic creation tools. Local inference. Human direction.
+                Open video models and cinematic creation tools.
               </p>
               <div className="flex flex-wrap items-center justify-center gap-2 mt-6">
                 <span className="status-badge status-building">BUILDING</span>
@@ -63,7 +63,7 @@ export default function VideoGenerationPage() {
                 Video Generation Areas
               </h2>
               <p className="body-lg text-muted-foreground text-center mb-12">
-                Six interconnected technical domains. Each feeds the broader video strategy.
+                Six interconnected technical domains.
               </p>
               <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                 {videoAreas.map((area) => (
@@ -105,8 +105,8 @@ export default function VideoGenerationPage() {
               </h2>
               <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                 {[
-                  { title: "OpenMontage", description: "AI-assisted video creation pipeline.", href: "/technology/openmontage", status: "BUILDING" },
-                  { title: "Technology / Creative AI", description: "Creative AI systems.", href: "/technology/creative-ai", status: "BUILDING" },
+                  { title: "OpenMontage", description: "AI-assisted video creation.", href: "/technology/openmontage", status: "BUILDING" },
+                  { title: "Technology / Creative AI", description: "Creative AI.", href: "/technology/creative-ai", status: "BUILDING" },
                   { title: "Media / Video", description: "Creative output showcase.", href: "/media#video", status: "BUILDING" },
                   { title: "Technology", description: "Technology overview.", href: "/technology", status: "BUILDING" },
                 ].map((project) => (

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 
 const navigation = [
@@ -25,6 +25,7 @@ const workAreas = [
 
 export function Navigation() {
   const pathname = usePathname();
+  const router = useRouter();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [workDropdownOpen, setWorkDropdownOpen] = useState(false);
@@ -41,6 +42,10 @@ export function Navigation() {
     setMobileMenuOpen(false);
     setWorkDropdownOpen(false);
   }, [pathname]);
+
+  const handleBack = () => {
+    router.back();
+  };
 
   return (
     <header
@@ -68,6 +73,30 @@ export function Navigation() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex md:items-center md:gap-1">
+            {/* Back & Home Buttons */}
+            <div className="flex items-center gap-1 mr-2">
+              <button
+                onClick={handleBack}
+                className="p-2 rounded-md text-muted-foreground hover:text-foreground hover:bg-accent focus-visible-ring"
+                aria-label="Go back"
+                title="Back"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+              <Link
+                href="/"
+                className="p-2 rounded-md text-muted-foreground hover:text-foreground hover:bg-accent focus-visible-ring"
+                aria-label="Home"
+                title="Home"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l9-9 9 9M5 10v10h14V10" />
+                </svg>
+              </Link>
+            </div>
+
             {navigation.map((item) => (
               <Link
                 key={item.name}
@@ -115,7 +144,7 @@ export function Navigation() {
               </button>
 
               {workDropdownOpen && (
-                <div className="absolute left-0 top-full mt-2 w-72 rounded-xl border border-border bg-card py-2 shadow-lg animate-fade-in" role="menu">
+                <div className="absolute left-0 top-full mt-2 w-72 rounded-xl border border-border bg-card py-2 shadow-lg animate-fade-in z-50" role="menu">
                   <div className="px-3 py-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider">
                     Community & Economy
                   </div>
@@ -249,10 +278,39 @@ export function Navigation() {
           </button>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile Menu - Fixed positioning to avoid overlay issues */}
         {mobileMenuOpen && (
-          <div id="mobile-menu" className="md:hidden py-4 border-t border-border animate-slide-up" role="navigation" aria-label="Mobile navigation">
-            <div className="flex flex-col gap-1">
+          <div
+            id="mobile-menu"
+            className="md:hidden absolute top-full left-0 right-0 bg-background border-t border-border shadow-lg z-40 animate-fade-in"
+            role="navigation"
+            aria-label="Mobile navigation"
+          >
+            <div className="flex flex-col gap-1 py-4">
+              {/* Back & Home in Mobile */}
+              <div className="flex items-center gap-2 px-3 py-2">
+                <button
+                  onClick={handleBack}
+                  className="flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium text-foreground hover:bg-accent focus-visible-ring"
+                  aria-label="Go back"
+                >
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                  </svg>
+                  Back
+                </button>
+                <Link
+                  href="/"
+                  className="flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium text-foreground hover:bg-accent focus-visible-ring"
+                  aria-label="Home"
+                >
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l9-9 9 9M5 10v10h14V10" />
+                  </svg>
+                  Home
+                </Link>
+              </div>
+
               {navigation.map((item) => (
                 <Link
                   key={item.name}

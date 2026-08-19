@@ -5,7 +5,7 @@ import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Open Source Systems",
-  description: "Open protocols, open models, open data, open governance, forkable infrastructure, community-owned technology commons.",
+  description: "Open protocols, open models, open data, open governance, forkable infrastructure.",
   openGraph: {
     title: "Open Source Systems — Technology",
     description: "Open protocols and community-owned technology commons.",
@@ -14,12 +14,12 @@ export const metadata: Metadata = {
 };
 
 const openSourceAreas = [
-  { title: "Open Protocols", description: "Open communication and coordination protocols. No proprietary lock-in. Community-governed standards." },
-  { title: "Open Models", description: "Open-weight AI models. Community-auditable. Locally runnable. No vendor lock-in." },
-  { title: "Open Data", description: "Open datasets, open knowledge graphs, open research. The commons grows through sharing." },
-  { title: "Open Governance", description: "Community governance of technology commons. Transparent decision-making. Forkable infrastructure." },
-  { title: "Forkable Infrastructure", description: "Infrastructure that can be forked, adapted, and recombined. No single point of control." },
-  { title: "Community-Owned Technology Commons", description: "Technology as shared resource. Not platform extraction. Community ownership and stewardship." },
+  { title: "Open Protocols", description: "Open communication and coordination protocols. No proprietary lock-in." },
+  { title: "Open Models", description: "Open-weight AI models. Community-auditable. Locally runnable." },
+  { title: "Open Data", description: "Open datasets, open knowledge graphs, open research." },
+  { title: "Open Governance", description: "Community governance of technology commons. Transparent decision-making." },
+  { title: "Forkable Infrastructure", description: "Infrastructure that can be forked, adapted, and recombined." },
+  { title: "Community-Owned Technology Commons", description: "Technology as shared resource. Community ownership and stewardship." },
 ];
 
 const principles = [
@@ -45,7 +45,7 @@ export default function OpenSourcePage() {
                 OPEN SOURCE SYSTEMS
               </h1>
               <p className="body-lg text-muted-foreground max-w-2xl mx-auto">
-                Open protocols and community-owned technology commons. The commons grows through sharing.
+                Open protocols and community-owned technology commons.
               </p>
               <div className="flex flex-wrap items-center justify-center gap-2 mt-6">
                 <span className="status-badge status-building">BUILDING</span>
@@ -63,7 +63,7 @@ export default function OpenSourcePage() {
                 Open Source Areas
               </h2>
               <p className="body-lg text-muted-foreground text-center mb-12">
-                Six interconnected technical domains. Each feeds the broader open source strategy.
+                Six interconnected technical domains.
               </p>
               <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                 {openSourceAreas.map((area) => (
@@ -105,8 +105,8 @@ export default function OpenSourcePage() {
               </h2>
               <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                 {[
-                  { title: "Creator Community", description: "Open execution layer for projects.", href: "/creator-community", status: "BUILDING" },
-                  { title: "OpenMontage", description: "Open creative tools and pipelines.", href: "/technology/openmontage", status: "BUILDING" },
+                  { title: "Creator Community", description: "Open execution layer.", href: "/creator-community", status: "BUILDING" },
+                  { title: "OpenMontage", description: "Open creative tools.", href: "/technology/openmontage", status: "BUILDING" },
                   { title: "Universal Guard Trust", description: "Open architecture framework.", href: "/universal-guard-trust", status: "OPERATING" },
                   { title: "Technology", description: "Technology overview.", href: "/technology", status: "BUILDING" },
                 ].map((project) => (

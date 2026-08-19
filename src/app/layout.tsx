@@ -15,6 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://shanmugamvijay.com"),
   title: {
     default: "Shanmugam Vijay Balakrishnan — Creator • Founder • Systems Builder • Civilization Architect",
     template: "%s | Shanmugam Vijay Balakrishnan",
@@ -22,20 +23,35 @@ export const metadata: Metadata = {
   description: "Building community economies, intelligent technologies and civilizational systems for a flourishing future. Personal identity hub connecting Boysenberry, Universal Guard Trust, Kingdom of Shiva, Zentium, Creator Community, and technology initiatives.",
   keywords: [
     "Shanmugam Vijay Balakrishnan",
+    "vijay",
+    "ai",
+    "open source ai tools creativity creator",
+    "universe",
+    "universal guard trust ugt",
+    "heaven on earth",
+    "oneness",
+    "soulconnect",
     "Creator",
     "Founder",
     "Systems Builder",
     "Civilization Architect",
     "Boysenberry",
-    "Universal Guard Trust",
     "Kingdom of Shiva",
     "Zentium",
     "Creator Community",
     "Community Economy",
     "Decentralization",
-    "AI",
     "Blockchain",
     "Civilizational Systems",
+    "Integrated Intelligence",
+    "Open Source",
+    "Local AI",
+    "Agent Systems",
+    "Community Money",
+    "DAO",
+    "VR Metaverse",
+    "Creative AI",
+    "Video Generation",
   ],
   authors: [{ name: "Shanmugam Vijay Balakrishnan" }],
   creator: "Shanmugam Vijay Balakrishnan",
@@ -75,7 +91,7 @@ export const metadata: Metadata = {
     creator: "@shanmugamvijay",
   },
   verification: {
-    google: "google-site-verification-code",
+    google: "1ZeR5RwMMECk10BnidsOEt_MRAP9EluMO4ux9wg_2WU",
   },
   other: {
     "theme-color": "#0a0a0a",
@@ -101,6 +117,12 @@ const structuredData = {
   "url": "https://shanmugamvijay.com",
   "sameAs": [
     "https://www.ugtglobal.space",
+    "https://ugtindia.space",
+    "https://creatorcommunity.space",
+    "https://kingdomofshiva.space",
+    "https://github.com/missionvj369-coder",
+    "https://www.instagram.com/neoxhuman",
+    "https://www.linkedin.com/in/universal-guard-trust-ugt-b09b05394",
   ],
   "founderOf": [
     {
@@ -118,13 +140,13 @@ const structuredData = {
     {
       "@type": "Organization",
       "name": "Creator Community",
-      "url": "https://shanmugamvijay.com/creator-community",
+      "url": "https://creatorcommunity.space",
       "description": "Execution layer for civilizational creation"
     },
     {
       "@type": "Organization",
       "name": "Kingdom of Shiva",
-      "url": "https://shanmugamvijay.com/kingdom-of-shiva",
+      "url": "https://kingdomofshiva.space",
       "description": "Virtual Civilization of Hindu Knowledge, Heritage, Philosophy and Living Traditions"
     }
   ],

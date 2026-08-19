@@ -5,7 +5,7 @@ import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Metaverse",
-  description: "Persistent virtual worlds, interoperable identity, digital ownership, community economies in virtual spaces, cross-world portability. Research status.",
+  description: "Persistent virtual worlds, interoperable identity, digital ownership, community economies.",
   openGraph: {
     title: "Metaverse — Technology",
     description: "Persistent virtual worlds and community economies in virtual spaces.",
@@ -14,12 +14,12 @@ export const metadata: Metadata = {
 };
 
 const metaverseAreas = [
-  { title: "Persistent Virtual Worlds", description: "Continuous virtual environments that exist beyond individual sessions. Community spaces that persist and evolve." },
-  { title: "Interoperable Identity", description: "Digital identity that works across worlds. Portable reputation, credentials, and social graph." },
-  { title: "Digital Ownership", description: "Community-owned virtual assets. Not speculation — infrastructure for community economies in virtual spaces." },
-  { title: "Community Economies in Virtual Spaces", description: "Virtual marketplaces, virtual stores, virtual services. Community value circulation in immersive environments." },
-  { title: "Cross-World Portability", description: "Assets, identity, and relationships that move between worlds. Open standards. No walled gardens." },
-  { title: "Virtual Governance", description: "Community governance in virtual spaces. DAOs, deliberation spaces, decision-making infrastructure." },
+  { title: "Persistent Virtual Worlds", description: "Continuous virtual environments. Community spaces that persist and evolve." },
+  { title: "Interoperable Identity", description: "Digital identity that works across worlds. Portable reputation and social graph." },
+  { title: "Digital Ownership", description: "Community-owned virtual assets. Infrastructure for community economies." },
+  { title: "Community Economies in Virtual Spaces", description: "Virtual marketplaces, stores, services. Community value circulation." },
+  { title: "Cross-World Portability", description: "Assets, identity, and relationships that move between worlds. Open standards." },
+  { title: "Virtual Governance", description: "Community governance in virtual spaces. DAOs, deliberation, decision-making." },
 ];
 
 const principles = [
@@ -45,7 +45,7 @@ export default function MetaversePage() {
                 METAVERSE
               </h1>
               <p className="body-lg text-muted-foreground max-w-2xl mx-auto">
-                Persistent virtual worlds, interoperable identity, community economies in virtual spaces.
+                Virtual worlds. Community economies. Research phase.
               </p>
               <div className="flex flex-wrap items-center justify-center gap-2 mt-6">
                 <span className="status-badge status-research">RESEARCH</span>
@@ -63,7 +63,7 @@ export default function MetaversePage() {
                 Metaverse Areas
               </h2>
               <p className="body-lg text-muted-foreground text-center mb-12">
-                Six interconnected technical domains. Each feeds the broader immersive strategy.
+                Six interconnected technical domains.
               </p>
               <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                 {metaverseAreas.map((area) => (
@@ -105,7 +105,7 @@ export default function MetaversePage() {
               </h2>
               <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                 {[
-                  { title: "Zentium", description: "VR/metaverse integration vision.", href: "/zentium", status: "BUILDING" },
+                  { title: "Zentium", description: "Blockchain with VR/metaverse integration.", href: "/zentium", status: "BUILDING" },
                   { title: "Technology / VR", description: "VR deep dive.", href: "/technology/vr", status: "RESEARCH" },
                   { title: "Kingdom of Shiva", description: "Virtual temples and knowledge visualization.", href: "/kingdom-of-shiva", status: "BUILDING" },
                   { title: "Technology", description: "Technology overview.", href: "/technology", status: "BUILDING" },
